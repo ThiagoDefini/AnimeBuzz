@@ -11,6 +11,8 @@
 		7BBBCDAD29E49E52006DD381 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBBCDAC29E49E52006DD381 /* ContentView.swift */; };
 		7BBBCDAF29E49E52006DD381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBCDAE29E49E52006DD381 /* Assets.xcassets */; };
 		7BBBCDB229E49E52006DD381 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBCDB129E49E52006DD381 /* Preview Assets.xcassets */; };
+		92A88BAE29E4A21B004495AB /* OnboardingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88BAD29E4A21B004495AB /* OnboardingData.swift */; };
+		92A88BB229E4A253004495AB /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A88BB129E4A253004495AB /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		7BBBCDAC29E49E52006DD381 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7BBBCDAE29E49E52006DD381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BBBCDB129E49E52006DD381 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		92A88BAD29E4A21B004495AB /* OnboardingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingData.swift; sourceTree = "<group>"; };
+		92A88BB129E4A253004495AB /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,7 @@
 		7BBBCDA929E49E52006DD381 /* AnimeBuzz */ = {
 			isa = PBXGroup;
 			children = (
+				92A88BAC29E4A200004495AB /* Onboarding */,
 				7BBBCDAA29E49E52006DD381 /* AnimeBuzzApp.swift */,
 				7BBBCDAC29E49E52006DD381 /* ContentView.swift */,
 				7BBBCDAE29E49E52006DD381 /* Assets.xcassets */,
@@ -65,6 +70,15 @@
 				7BBBCDB129E49E52006DD381 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		92A88BAC29E4A200004495AB /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				92A88BAD29E4A21B004495AB /* OnboardingData.swift */,
+				92A88BB129E4A253004495AB /* OnboardingView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A88BAE29E4A21B004495AB /* OnboardingData.swift in Sources */,
+				92A88BB229E4A253004495AB /* OnboardingView.swift in Sources */,
 				7BBBCDAD29E49E52006DD381 /* ContentView.swift in Sources */,
 				7BBBCDAB29E49E52006DD381 /* AnimeBuzzApp.swift in Sources */,
 			);
