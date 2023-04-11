@@ -19,6 +19,7 @@ struct ContentView: View {
         self.currentTab = currentTab
     }
     
+    
     var body: some View {
         ZStack{
             Images().white_bg
