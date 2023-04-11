@@ -42,7 +42,7 @@ class Event {
         dates.remove(at: pos)
     }
     
-    func getGuestS() -> [Guest]{
+    func getGuests() -> [Guest]{
         return guests
     }
     
