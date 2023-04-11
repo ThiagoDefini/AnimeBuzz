@@ -16,33 +16,41 @@ struct OnboardingView: View {
     @Binding var iconSize: Double
     @Binding var currentTab: Int
     
+    @State private var showLine1 = false
+    @State private var showLine2 = false
+    @State private var showLine3 = false
+    
     var body: some View {
         ZStack{
-//            Image("WhiteBackground")
-//                .resizable(resizingMode: .stretch)
-            
             VStack(spacing: 40) {
-//                Image("Logo")
-//                    .scaleEffect(isAnimating ? 1 : 0.9)
                 
-                ZStack(alignment: .bottom){ //Buzz
-                    Image("Buzz")
+                ZStack(alignment: .bottom){
+                    Images().buzz
                     Text(data.icon)
                         .font(.custom("SF", size: CGFloat(iconSize)))
                         .scaleEffect(isAnimating ? 1 : 0.9)
-                }
+                } // BUZZ
                 
-                // TEXTO PRINCIPAL
-                if(data.id == 0){
-                    Text(data.bodyText).font(.custom("Helvetica", size: 26)).bold().multilineTextAlignment(.leading).scaleEffect(isAnimating ? 1 : 0.5)
-                }
-                else if(data.id == 1){
-                    Text(data.bodyText).font(.title).bold().multilineTextAlignment(.center).lineLimit(4).scaleEffect(isAnimating ? 1 : 0.5)
-                }
-                else{
-                    Text(data.bodyText).font(.title).bold().multilineTextAlignment(.trailing).lineLimit(4).scaleEffect(isAnimating ? 1 : 0.5)
-                }
-                //
+                VStack(alignment: data.type){
+                    if(showLine1){
+                        Text(data.bodyText.components(separatedBy: "#")[0])
+                            .font(.custom("Helvetica", size: 26))
+                            .bold()
+                            .transition(.offset(x: -500, y: 0))
+                    }
+                    if(showLine2){
+                        Text(data.bodyText.components(separatedBy: "#")[1])
+                            .font(.custom("Helvetica", size: 26))
+                            .bold()
+                            .transition(.offset(x: -500, y: 0))
+                    }
+                    if(showLine3){
+                        Text(data.bodyText.components(separatedBy: "#")[2])
+                            .font(.custom("Helvetica", size: 26))
+                            .bold()
+                            .transition(.offset(x: -500, y: 0))
+                    }
+                } // TEXTO PRINCIPAL
                 
                 Button(action: {
                     withAnimation(.easeOut(duration: 2.0)) {
@@ -64,13 +72,13 @@ struct OnboardingView: View {
                 } // CONTINUE BUTTON
                 .buttonStyle(.borderedProminent)
                 .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
-                .tint(Color("AccentColor"))
+                .tint(Colors().yellow)
                 .controlSize(.large)
                 .font(.custom("Lato", size: 22))
                 .foregroundColor(Color.black)
                 .overlay(
-                RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
-                    .stroke(Color.black, lineWidth: 2))
+                    RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
+                        .stroke(Color.black, lineWidth: 2))
                 
                 if(data.id != 0){ // BOTÃO DE VOLTAR
                     Button(action: {
@@ -88,6 +96,17 @@ struct OnboardingView: View {
                 else{NavigationLink{} label: { Text("Voltar").underline().foregroundColor(Color.gray)}.hidden()}
                 
             }.padding()
+                .onAppear{
+                    withAnimation(.easeInOut(duration: 1.5)) {
+                        showLine1 = true
+                    }
+                    withAnimation(.easeInOut(duration: 1.5).delay(0.5)) {
+                        showLine2 = true
+                    }
+                    withAnimation(.easeInOut(duration: 1.5).delay(1.0)) {
+                        showLine3 = true
+                    }
+                }
         }
         .ignoresSafeArea(.all)
         .onAppear(perform: {

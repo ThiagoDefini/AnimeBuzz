@@ -21,12 +21,12 @@ struct ContentView: View {
     
     var body: some View {
         ZStack{
-            Image("WhiteBackground")
+            Images().white_bg
                 .resizable(resizingMode: .stretch)
             
             VStack(spacing: 40){
                 Spacer()
-                Image("Logo")
+                Images().logo
                     .resizable()
                     .frame(width:150, height:100)
                     .padding(.top, 20)
