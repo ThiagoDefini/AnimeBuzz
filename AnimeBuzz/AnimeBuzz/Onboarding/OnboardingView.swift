@@ -36,49 +36,67 @@ struct OnboardingView: View {
                         Text(data.bodyText.components(separatedBy: "#")[0])
                             .font(.custom("Helvetica", size: 26))
                             .bold()
-                            .transition(.offset(x: -500, y: 0))
+                            .transition(.offset(x: -800, y: 0))
                     }
                     if(showLine2){
                         Text(data.bodyText.components(separatedBy: "#")[1])
                             .font(.custom("Helvetica", size: 26))
                             .bold()
-                            .transition(.offset(x: -500, y: 0))
+                            .transition(.offset(x: -800, y: 0))
                     }
                     if(showLine3){
                         Text(data.bodyText.components(separatedBy: "#")[2])
                             .font(.custom("Helvetica", size: 26))
                             .bold()
-                            .transition(.offset(x: -500, y: 0))
+                            .transition(.offset(x: -800, y: 0))
                     }
                 } // TEXTO PRINCIPAL
                 
-                Button(action: {
-                    withAnimation(.easeOut(duration: 2.0)) {
-                        if currentTab < 2 {
-                            currentTab+=1
+                if(currentTab < 2){
+                    Button(action: {
+                        withAnimation(.easeOut(duration: 2.0)) {
+                            if currentTab < 2 {
+                                currentTab+=1
+                            }
                         }
-                        else{
-                            //COMEÇAR APP
-                        }
+                    }) {
+                    label: do {
+                        Text(data.buttonText)
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .font(.title)
+                            .italic()
                     }
-                }) {
-                label: do {
-                    Text(data.buttonText)
-                        .frame(maxWidth: .infinity)
-                        .bold()
-                        .font(.title)
-                        .italic()
-                }
-                } // CONTINUE BUTTON
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
-                .tint(Colors().yellow)
-                .controlSize(.large)
-                .font(.custom("Lato", size: 22))
-                .foregroundColor(Color.black)
-                .overlay(
-                    RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
-                        .stroke(Color.black, lineWidth: 2))
+                    } // CONTINUE BUTTON
+                    .buttonStyle(.borderedProminent)
+                    .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
+                    .tint(Colors().yellow)
+                    .controlSize(.large)
+                    .font(.custom("Lato", size: 22))
+                    .foregroundColor(Color.black)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
+                            .stroke(Color.black, lineWidth: 2))
+                } // BOTÃO DE CONTINUAR
+                else {
+                    NavigationLink(destination: TesteView(),
+                                   label: {
+                        Text(data.buttonText)
+                            .frame(maxWidth: .infinity)
+                            .bold()
+                            .font(.title)
+                            .italic()
+                    }) // CONTINUE BUTTON
+                    .buttonStyle(.borderedProminent)
+                    .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
+                    .tint(Colors().yellow)
+                    .controlSize(.large)
+                    .font(.custom("Lato", size: 22))
+                    .foregroundColor(Color.black)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
+                            .stroke(Color.black, lineWidth: 2))
+                } // BOTÃO DE AVANÇAR
                 
                 if(data.id != 0){ // BOTÃO DE VOLTAR
                     Button(action: {

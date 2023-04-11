@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State private var isAnimating: Bool = false
     @State private var btnCornerRadius: Double = 15.0
     @State private var iconSize: Double = 90.0
     @State private var currentTab: Int = 0
@@ -21,29 +22,38 @@ struct ContentView: View {
     
     
     var body: some View {
-        ZStack{
-            Images().white_bg
-                .resizable(resizingMode: .stretch)
-            
-            VStack(spacing: 40){
-                Spacer()
-                Images().logo
-                    .resizable()
-                    .frame(width:150, height:100)
-                    .padding(.top, 20)
+        NavigationStack{
+            ZStack{
+                Images().white_bg
+                    .resizable(resizingMode: .stretch)
                 
-                TabView(selection: $currentTab,
-                        content:  {
-                    ForEach(OnboardingData.list) { viewData in
-                        OnboardingView(data: viewData, btnCornerRadius: $btnCornerRadius, iconSize: $iconSize, currentTab: $currentTab)
-                            .tag(viewData.id)
+                VStack(spacing: 40){
+                    Spacer()
+                    Images().logo
+                        .resizable()
+                        .frame(width:150, height:100)
+                        .padding(.top, 20)
+                        .scaleEffect(isAnimating ? 1 : 0.9)
+                    
+                    TabView(selection: $currentTab,
+                            content:  {
+                        ForEach(OnboardingData.list) { viewData in
+                            OnboardingView(data: viewData, btnCornerRadius: $btnCornerRadius, iconSize: $iconSize, currentTab: $currentTab)
+                                .tag(viewData.id)
+                        }
+                    })
+                    .tabViewStyle(PageTabViewStyle())
+                    .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    .padding(.bottom, 40)
+                }
+            }.ignoresSafeArea()
+                .onAppear(perform: {
+                    isAnimating = false
+                    withAnimation(.easeOut(duration: 0.5)) {
+                        self.isAnimating = true
                     }
                 })
-                .tabViewStyle(PageTabViewStyle())
-                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-                .padding(.bottom, 40)
-            }
-        }.ignoresSafeArea()
+        }
     }
 }
 
