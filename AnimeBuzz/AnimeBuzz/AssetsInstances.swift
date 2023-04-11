@@ -39,4 +39,18 @@ class Images{
 
 class Icons{
     var noticias = Image(systemName: "newspaper.fill")
+    var estrela = Image(systemName: "star.fill")
+    var calendario = Image(systemName: "calendar.badge.clock")
+    var mapa = Image(systemName: "map.fill")
+    var estrela_riscada = Image(systemName: "star.slash.fill")
+    var info = Image(systemName: "info.circle")
+    var contato = Image(systemName: "at")
+    var expandir = Image(systemName: "arrow.up.left.and.arrow.down.right")
+    var relogio = Image(systemName: "clock")
+    var atividade = Image(systemName: "person.fill")
+    var local = Image(systemName: "pin.fill")
+    var ticket = "🎟️"
+    var instagram = Image("instagram")
+    var facebook = Image("facebook")
+    var youtube = Image("youtube")
 }
