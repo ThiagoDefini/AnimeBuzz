@@ -10,7 +10,7 @@ import SwiftUI
 
 class Colors{
     var black = Color("Grafite")
-    var yellow = Color("AccentColor")
+    var yellow = Color("Gold")
     var pink = Color("Bubblegum Pink")
     var cian = Color("Diamond")
     var green = Color("Grass Green")
@@ -19,6 +19,7 @@ class Colors{
     var lime = Color("Lime")
     var magenta = Color("Magenta")
     var blue = Color("Ocean Blue")
+    var principal = Color("AccentColor")
 }
 
 class Images{
