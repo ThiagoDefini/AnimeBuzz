@@ -18,13 +18,13 @@ class Guest {
     private var listOfattraction: [Attraction]
     
     
-    init(name: String, category: String, description: String, socialMedia: String, image: String, listOfAttraction: String) {
+    init(name: String, category: String, description: String, socialMedia: String, image: String, listOfAttraction: [Attraction]) {
         self.name = name
         self.category = category
         self.description = description
         self.socialMedia = [socialMedia]
         self.image = image
-        self.listOfattraction = [listOfattraction]
+        self.listOfattraction = listOfAttraction
     }
     
     func getName() -> String{
@@ -56,7 +56,7 @@ class Guest {
     }
 
     func addSocialMedia(socialMedia: String){
-        socialMedia.append(socialMedia)
+        self.socialMedia.append(socialMedia)
     }
     
     func removeSocialMedia(pos: Int){
@@ -71,12 +71,12 @@ class Guest {
         self.image = image
     }
     
-    func getListOfattraction() -> [String]{
+    func getListOfattraction() -> [Attraction]{
         return listOfattraction
     }
 
-    func addListOfattraction(listOfattraction: String){
-        listOfattraction.append(listOfattraction)
+    func addListOfattraction(listOfattraction: Attraction){
+        self.listOfattraction.append(listOfattraction)
     }
     
     func removeListOfattractiona(pos: Int){

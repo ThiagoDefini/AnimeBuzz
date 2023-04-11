@@ -54,7 +54,7 @@ class Event {
         guests.remove(at: pos)
     }
     
-    func getAttractions() -> [Attractions]{
+    func getAttractions() -> [Attraction]{
         return attractions
     }
     
