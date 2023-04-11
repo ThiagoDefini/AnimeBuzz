@@ -6,20 +6,32 @@
 //
 
 import Foundation
+import SwiftUI
 
-class Event {
+class Event: Hashable{
+    static func == (lhs: Event, rhs: Event) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    private var id: String = UUID().uuidString
     private var city: String
     private var dates: [Date]
     private var guests: [Guest]
     private var attractions: [Attraction]
     private var map: String
+    private var imageName: Image
     
-    init(city: String, dates: [Date], guests: [Guest], attractions: [Attraction], map: String) {
+    init(city: String, dates: [Date], guests: [Guest], attractions: [Attraction], map: String, imageName: Image) {
         self.city = city
         self.dates = dates
         self.guests = guests
         self.attractions = attractions
         self.map = map
+        self.imageName = imageName
     }
     
     func getCity() -> String{
@@ -72,6 +84,14 @@ class Event {
     
     func setMap(map: String){
         self.map = map
+    }
+    
+    func getImageName() -> Image{
+        return self.imageName
+    }
+    
+    func setImageName(imageName: Image){
+        self.imageName = imageName
     }
     
 }
