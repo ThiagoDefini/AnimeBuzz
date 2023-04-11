@@ -42,7 +42,7 @@ class Event {
         dates.remove(at: pos)
     }
     
-    func getGuestS() -> [Guest]{
+    func getGuests() -> [Guest]{
         return guests
     }
     
@@ -54,7 +54,7 @@ class Event {
         guests.remove(at: pos)
     }
     
-    func getAttractions() -> [Attractions]{
+    func getAttractions() -> [Attraction]{
         return attractions
     }
     
