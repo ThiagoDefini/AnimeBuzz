@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "white bg.png",
+      "filename" : "titulo mapa.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "white bg@2x.png",
+      "filename" : "titulo mapa@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "white bg@3x.png",
+      "filename" : "titulo mapa@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
