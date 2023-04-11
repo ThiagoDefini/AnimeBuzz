@@ -11,7 +11,7 @@ import SwiftUI
 struct AnimeBuzzApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            tabViewScreen()
         }
     }
 }
