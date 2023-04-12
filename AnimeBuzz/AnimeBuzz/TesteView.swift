@@ -11,14 +11,24 @@ struct TesteView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Colors().black.edgesIgnoringSafeArea(.top)// BARRA TOPO
-                Colors().pink.edgesIgnoringSafeArea(.bottom).padding(.top, 40)                
-                
-                //COMEÇO DO CORPO DA VIEW--
-                Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).foregroundColor(.white)
+                VStack(spacing: 0){
+                    Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
+                    
+                    ZStack{
+                        Colors().pink.edgesIgnoringSafeArea(.bottom)
+                        //COMEÇO DO CORPO DA VIEW--
+                        ScrollView(.vertical){
+                            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).foregroundColor(.white).font(.custom(Fonts.Lato().regular, size: 30))
+                        }.scrollIndicators(.hidden)
+                    }
+                }
             }
         }
+        .frame(minHeight: 200)
 //        .navigationBarBackButtonHidden()
+        .toolbarBackground(.visible, for: .navigationBar)
+        .toolbarBackground(Colors().black, for: .navigationBar)
+        .navigationBarTitleDisplayMode(.large)
         .toolbar{
             ToolbarItem(placement: .principal){
                 Images().logo
