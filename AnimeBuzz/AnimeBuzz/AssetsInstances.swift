@@ -32,7 +32,6 @@ class Images{
     var mapa = Image("Mapa")
 }
     
-}
 class Titulos{
     var titulo_eventos = Image("Titulo Eventos")
     var titulo_noticias_poa = Image("Titulo Noticias Poa")

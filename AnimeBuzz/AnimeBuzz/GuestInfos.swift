@@ -24,7 +24,6 @@ struct GuestInfos: View {
                 Text(guest.getName())
                     .padding(.vertical,1)
                     .font(.system(size: 24))
-//                    .shadow(color: .black, radius: 1)
                 Text(guest.getCategory())
                     .font(.system(size: 16))
 
