@@ -94,3 +94,4 @@ class Attraction{
     
 }
 
+var testeAtracoes: Attraction = Attraction(time: "16h", attractionType: .atividadeLivre, description: "teste", place: "mapa", favorited: false)

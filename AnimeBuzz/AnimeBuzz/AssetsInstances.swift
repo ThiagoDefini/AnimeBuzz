@@ -30,35 +30,37 @@ class Images{
     var poa = Image("Poa")
     var portao = Image("Portao")
     var mapa = Image("Mapa")
+}
     
-    class Titulos{
-        var titulo_eventos = Image("Titulo Eventos")
-        var titulo_noticias_poa = Image("Titulo Noticias Poa")
-        var titulo_noticias_portao = Image("Titulo Noticias Portao")
-        var titulo_cronograma = Image("Titulo Cronograma")
-        var titulo_mapa = Image("Titulo Mapa")
-        var titulo_favoritos = Image("Titulo Favoritos")
+class Titulos{
+    var titulo_eventos = Image("Titulo Eventos")
+    var titulo_noticias_poa = Image("Titulo Noticias Poa")
+    var titulo_noticias_portao = Image("Titulo Noticias Portao")
+    var titulo_cronograma = Image("Titulo Cronograma")
+    var titulo_mapa = Image("Titulo Mapa")
+    var titulo_favoritos = Image("Titulo Favoritos")
+}
+    
+class Convidados{
+    class Pequeno{
+        var charles_emmanuel = Image("Charles Emmanuel")
+        var ricardo_cruz = Image("Ricardo Cruz")
+        var detonator = Image("Detonator")
+        var luisa_horta = Image("Luisa Horta")
+        var mariana_torres = Image("Mariana Torres")
+        var moo_chan = Image("Moo-chan")
     }
     
-    class Convidados{
-        class Pequeno{
-            var charles_emmanuel = Image("Charles Emmanuel")
-            var ricardo_cruz = Image("Ricardo Cruz")
-            var detonator = Image("Detonator")
-            var luisa_horta = Image("Luisa Horta")
-            var mariana_torres = Image("Mariana Torres")
-            var moo_chan = Image("Moo-chan")
-        }
-        class Grande{
-            var charles_emmanuel = Image("Charles Emmanuel Maior")
-            var ricardo_cruz = Image("Ricardo Cruz Maior")
-            var detonator = Image("Detonator Maior")
-            var luisa_horta = Image("Luisa Horta Maior")
-            var mariana_torres = Image("Mariana Torres Maior")
-            var moo_chan = Image("Moo-chan Maiors")
-        }
+    class Grande{
+        var charles_emmanuel = Image("Charles Emmanuel Maior")
+        var ricardo_cruz = Image("Ricardo Cruz Maior")
+        var detonator = Image("Detonator Maior")
+        var luisa_horta = Image("Luisa Horta Maior")
+        var mariana_torres = Image("Mariana Torres Maior")
+        var moo_chan = Image("Moo-chan Maiors")
     }
 }
+
 
 class Icons{
     var noticias = Image(systemName: "newspaper.fill")
