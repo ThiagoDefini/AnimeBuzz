@@ -41,11 +41,13 @@ struct TicketButton: ButtonStyle {
     }
 }
 
-
 struct TabBarNews: View {
     
+    var arrayGuests: [Guest] = [guest1, guest2, guest3, guest4, guest5, guest6]
+
     var body: some View {
         
+
         NavigationStack {
             
             ZStack {
@@ -56,6 +58,7 @@ struct TabBarNews: View {
                             .edgesIgnoringSafeArea(.bottom)
                         VStack{
                             Titulos().titulo_noticias_poa
+                                .ignoresSafeArea()
                             Spacer()
                             
                         }
@@ -90,15 +93,16 @@ struct TabBarNews: View {
                                     .italic()
                                     .padding(.top, 20)
                                     
-                                    // fotos
 
-//                                    VStack{
-//                                        ForEach(GuestInfos, id: \.self) {guest in }
-//                                    }
+                                    VStack{
+                                        ForEach(arrayGuests, id: \.self) {guest in
+                                            GuestInfos(guest: guest)
+                                        }
+                                    }
                                     
                                     Spacer()
                                 }
-                                .frame(width: 350, height: 800, alignment: .center)
+                                .frame(width: 350, alignment: .center)
                                 .background(Colors().purple)
                                 .cornerRadius(20)
                                 .overlay(
@@ -161,3 +165,4 @@ struct TabBarNews: View {
         }
     }
 }
+
