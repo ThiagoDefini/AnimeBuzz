@@ -11,7 +11,7 @@ struct tabViewScreen: View {
     var body: some View {
         TabView{
             //adicionar o nome certo das views quando prontas
-            ContentView()
+            TabBarNews()
                 .tabItem(){
                     VStack{
                         Icons().noticias
