@@ -103,20 +103,20 @@ struct OnboardingView: View {
                             .stroke(Color.black, lineWidth: 2))
                 } // BOTÃO DE AVANÇAR
                 
-                if(data.id != 0){ // BOTÃO DE VOLTAR
-                    Button(action: {
-                        withAnimation(.easeOut(duration: 2.0)) {
-                            if currentTab > 0 {
-                                currentTab-=1
-                            }
-                        }
-                    }){
-                    label: do {
-                        Text("Voltar").underline().foregroundColor(Color.gray)
-                    }
-                    }
-                } // BOTÃO DE VOLTAR
-                else{NavigationLink{} label: { Text("Voltar").underline().foregroundColor(Color.gray)}.hidden()}
+//                if(data.id != 0){ // BOTÃO DE VOLTAR
+//                    Button(action: {
+//                        withAnimation(.easeOut(duration: 2.0)) {
+//                            if currentTab > 0 {
+//                                currentTab-=1
+//                            }
+//                        }
+//                    }){
+//                    label: do {
+//                        Text("Voltar").underline().foregroundColor(Color.gray)
+//                    }
+//                    }
+//                } // BOTÃO DE VOLTAR
+//                else{NavigationLink{} label: { Text("Voltar").underline().foregroundColor(Color.gray)}.hidden()}
                 
             }.padding()
                 .onAppear{
