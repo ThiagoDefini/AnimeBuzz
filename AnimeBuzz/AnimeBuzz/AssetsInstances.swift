@@ -93,4 +93,10 @@ class Fonts{
         var light_italic = "Lato-LightItalic"
         var italic = "Lato-Italic"
     }
+    
+    class Helvetica{
+        var regular = "Helvetica"
+        var light = "Helvetica-Light"
+        var bold = "Helvetica-Bold"
+    }
 }
