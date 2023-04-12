@@ -18,6 +18,10 @@ struct TesteView: View {
                         Colors().pink.edgesIgnoringSafeArea(.bottom)
                         //COMEÇO DO CORPO DA VIEW--
                         ScrollView(.vertical){
+                            Text("porto alegre").modifier(title())
+                            Images.Convidados.Pequeno().charles_emmanuel
+                        }.scrollIndicators(.hidden).padding()
+
                             Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/).foregroundColor(.white).font(.custom(Fonts.Helvetica().light, size: 30))
 //                            Images.Convidados.Pequeno().charles_emmanuel
                         }.scrollIndicators(.hidden)
