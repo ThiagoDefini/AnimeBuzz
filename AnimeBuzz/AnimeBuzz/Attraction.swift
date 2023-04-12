@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum attractionType {
+enum attractionType{
     case atividadeLivre
     case presencaEspecial
     case convidadoEspecial
@@ -33,7 +33,7 @@ enum attractionType {
     }
 }
 
-class Attraction{
+class Attraction: Identifiable{
     private var time: String
     private var attractionType: attractionType
     private var description: String
