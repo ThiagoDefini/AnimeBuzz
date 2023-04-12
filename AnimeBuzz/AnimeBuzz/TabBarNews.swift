@@ -92,9 +92,9 @@ struct TabBarNews: View {
                                     
                                     // fotos
 
-                                    VStack{
-                                        ForEach(GuestInfos, id: \.self) {guest in }
-                                    }
+//                                    VStack{
+//                                        ForEach(GuestInfos, id: \.self) {guest in }
+//                                    }
                                     
                                     Spacer()
                                 }
