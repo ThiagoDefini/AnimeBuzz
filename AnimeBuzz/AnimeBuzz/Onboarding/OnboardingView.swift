@@ -84,7 +84,7 @@ struct OnboardingView: View {
                             .stroke(Color.black, lineWidth: 2))
                 } // BOTÃO DE CONTINUAR
                 else {
-                    NavigationLink(destination: TesteView(),
+                    NavigationLink(destination: SelectEventView(),
                                    label: {
                         Text(data.buttonText)
                             .frame(maxWidth: .infinity)

@@ -49,12 +49,12 @@ struct GuestInfos: View {
             }
             
         }
-        .background(.green)
+        .background(Colors().purple)
     }
 }
 
 struct GuestInfos_Previews: PreviewProvider {
     static var previews: some View {
-        GuestInfos(guest: Detonador)
+        GuestInfos(guest: guest1)
     }
 }
