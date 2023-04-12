@@ -59,7 +59,6 @@ class Convidados{
         var mariana_torres = Image("Mariana Torres Maior")
         var moo_chan = Image("Moo-chan Maiors")
     }
-}
 
 
 class Icons{
