@@ -80,7 +80,6 @@ struct SelectEventView: View{
                         Label("Send", systemImage: "at")
                             .padding(.top, 100)
                     })
-                    
                 }
                 
             }
