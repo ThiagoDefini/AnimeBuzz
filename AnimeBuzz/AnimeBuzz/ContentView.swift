@@ -44,14 +44,12 @@ struct ContentView: View {
                     })
                     .tabViewStyle(PageTabViewStyle())
                     .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-                    .padding(.bottom, 40)
+//                    .padding(.bottom, 40)
                     
-                    if(1 != 0){ // BOTÃO DE VOLTAR
+                    if(currentTab != 0){ // BOTÃO DE VOLTAR
                         Button(action: {
-                            withAnimation(.easeOut(duration: 2.0)) {
-                                if currentTab > 0 {
-                                    currentTab-=1
-                                }
+                            if currentTab > 0 {
+                                currentTab-=1
                             }
                         }){
                         label: do {
@@ -59,7 +57,17 @@ struct ContentView: View {
                         }
                         }.padding(.bottom, 60)
                     } // BOTÃO DE VOLTAR
-//                    else{NavigationLink{} label: { Text("Voltar").underline().foregroundColor(Color.gray)}.hidden()}
+                    else{
+                        Button(action: {
+                            if currentTab > 0 {
+                                currentTab-=1
+                            }
+                        }){
+                        label: do {
+                            Text("Voltar").underline().foregroundColor(Color.gray)
+                        }
+                        }.padding(.bottom, 60).hidden()
+                    }
                 }
             }.ignoresSafeArea()
                 .onAppear(perform: {

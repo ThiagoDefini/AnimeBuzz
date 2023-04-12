@@ -30,6 +30,7 @@ class Images{
     var poa = Image("Poa")
     var portao = Image("Portao")
     var mapa = Image("Mapa")
+}
     
 }
 class Titulos{
@@ -61,6 +62,7 @@ class Convidados{
     }
 }
 
+
 class Icons{
     var noticias = Image(systemName: "newspaper.fill")
     var estrela = Image(systemName: "star.fill")
@@ -91,5 +93,11 @@ class Fonts{
         var light = "Lato-Light"
         var light_italic = "Lato-LightItalic"
         var italic = "Lato-Italic"
+    }
+    
+    class Helvetica{
+        var regular = "Helvetica"
+        var light = "Helvetica-Light"
+        var bold = "Helvetica-Bold"
     }
 }
