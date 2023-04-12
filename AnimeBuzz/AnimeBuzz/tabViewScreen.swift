@@ -14,28 +14,28 @@ struct tabViewScreen: View {
             ContentView()
                 .tabItem(){
                     VStack{
-                        Image(systemName: "newspaper.fill")
+                        Icons().noticias
                         Text("Noticias")
                     }
                 }
             ContentView()
                 .tabItem(){
                     VStack{
-                        Image(systemName: "star.fill")
+                        Icons().estrela
                         Text("Favoritos")
                     }
                 }
             ContentView()
                 .tabItem(){
                     VStack{
-                        Image(systemName: "calendar.badge.clock")
+                        Icons().calendario
                         Text("Cronograma")
                     }
                 }
             ContentView()
                 .tabItem(){
                     VStack{
-                        Image(systemName: "map.fill")
+                        Icons().mapa
                         Text("Mapa")
                     }
                 }
