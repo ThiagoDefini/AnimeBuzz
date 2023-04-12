@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C15B97329E7321900E4D865 /* GuestInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C15B97229E7321900E4D865 /* GuestInfos.swift */; };
 		4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024A29E5DF940001748E /* TabBarNews.swift */; };
 		4C86024D29E5E7C70001748E /* SiteEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024C29E5E7C70001748E /* SiteEvento.swift */; };
 		4CA98ECF29E5C70C00CFF9B1 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C15B97229E7321900E4D865 /* GuestInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfos.swift; sourceTree = "<group>"; };
 		4C86024A29E5DF940001748E /* TabBarNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNews.swift; sourceTree = "<group>"; };
 		4C86024C29E5E7C70001748E /* SiteEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteEvento.swift; sourceTree = "<group>"; };
 		4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				7BBBCDB029E49E52006DD381 /* Preview Content */,
 				9202CA2F29E5C0860076D157 /* AssetsInstances.swift */,
 				928AF8D729E5E8A900D0D404 /* TesteView.swift */,
+				4C15B97229E7321900E4D865 /* GuestInfos.swift */,
 			);
 			path = AnimeBuzz;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				92A88BB229E4A253004495AB /* OnboardingView.swift in Sources */,
 				7BBBCDAD29E49E52006DD381 /* ContentView.swift in Sources */,
 				4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */,
+				4C15B97329E7321900E4D865 /* GuestInfos.swift in Sources */,
 				4CA98ED129E5DA0D00CFF9B1 /* Attraction.swift in Sources */,
 				7BEA5D7629E5C45600E36E1B /* Event.swift in Sources */,
 				7BBBCDAB29E49E52006DD381 /* AnimeBuzzApp.swift in Sources */,

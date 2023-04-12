@@ -41,6 +41,7 @@ struct TicketButton: ButtonStyle {
     }
 }
 
+
 struct TabBarNews: View {
     
     var body: some View {
@@ -54,7 +55,7 @@ struct TabBarNews: View {
                         Colors().pink
                             .edgesIgnoringSafeArea(.bottom)
                         VStack{
-                            Images().titulo_noticias_poa
+                            Titulos().titulo_noticias_poa
                             Spacer()
                             
                         }
@@ -89,43 +90,11 @@ struct TabBarNews: View {
                                     .italic()
                                     .padding(.top, 20)
                                     
-                                    
                                     // fotos
 
                                     VStack{
-                                        VStack{
-                                            
-                                            Image("Guest_CharlesEmmanuel")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 250)
-                                            
-                                            Text("Charles Emmanuel")
-                                                .padding(.vertical,1)
-                                            Text("DUBLADOR")
-                                        }
-                                        .bold()
-                                        .font(.system(size: 20))
-                                        .italic()
-                                        .foregroundColor(.white)
-
-                                        HStack {
-                                            Image("facebook")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 25)
-                                            Image("youtube")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 25)
-                                            Image("instagram")
-                                                .resizable()
-                                                .scaledToFit()
-                                                .frame(width: 25)
-                                        }
-                                        
+                                        ForEach(GuestInfos, id: \.self) {guest in }
                                     }
-                                    
                                     
                                     Spacer()
                                 }
