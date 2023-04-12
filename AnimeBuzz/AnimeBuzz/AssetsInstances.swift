@@ -30,6 +30,7 @@ class Images{
     var poa = Image("Poa")
     var portao = Image("Portao")
     var mapa = Image("Mapa")
+}
     
     class Titulos{
         var titulo_eventos = Image("Titulo Eventos")
@@ -59,6 +60,7 @@ class Images{
         }
     }
 }
+
 
 class Icons{
     var noticias = Image(systemName: "newspaper.fill")

@@ -54,7 +54,7 @@ struct TabBarNews: View {
                         Colors().pink
                             .edgesIgnoringSafeArea(.bottom)
                         VStack{
-                            Images().titulo_noticias_poa
+                            Titulos().titulo_noticias_poa
                             Spacer()
                             
                         }
