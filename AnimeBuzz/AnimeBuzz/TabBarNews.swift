@@ -13,13 +13,13 @@ struct TicketButton: ButtonStyle {
             .font(.custom("Helvica", size: 10.0))
         HStack{
             Spacer()
-
+            
             VStack{
                 Text("🎟️")
                     .font(.system(size: 60))
                     .rotationEffect(.degrees(-30))
             }
-
+            
             Spacer()
             
             VStack{
@@ -29,7 +29,7 @@ struct TicketButton: ButtonStyle {
             .bold()
             .italic()
             Spacer()
-
+            
         }
         .frame(width: 350, height: 80, alignment: .center)
         .background(Colors().yellow)
@@ -37,7 +37,7 @@ struct TicketButton: ButtonStyle {
         .overlay(
             RoundedRectangle(cornerRadius: 20)
                 .stroke(Color.black, lineWidth: 2)
-            )
+        )
     }
 }
 
@@ -67,15 +67,75 @@ struct TabBarNews: View {
                                         .foregroundColor(.white)
                                         .font(.system(size: 64, weight: .bold))
                                 }
+                                .padding(.bottom, 10)
                                 
                                 NavigationLink("") {
                                     SiteEvento()
                                 }
                                 .buttonStyle(TicketButton())
+                                .padding(.bottom, 40)
+
+
                                 
-                                Spacer()
-                                
-                                
+                                VStack{
+                                    VStack{
+                                        Text ("Convidados mais")
+                                            .foregroundColor(.white)
+                                        Text ("do que especiais")
+                                            .foregroundColor(Colors().yellow)
+                                    }
+                                    .bold()
+                                    .font(.system(size: 36))
+                                    .italic()
+                                    .padding(.top, 20)
+                                    
+                                    
+                                    // fotos
+
+                                    VStack{
+                                        VStack{
+                                            
+                                            Image("Guest_CharlesEmmanuel")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 250)
+                                            
+                                            Text("Charles Emmanuel")
+                                                .padding(.vertical,1)
+                                            Text("DUBLADOR")
+                                        }
+                                        .bold()
+                                        .font(.system(size: 20))
+                                        .italic()
+                                        .foregroundColor(.white)
+
+                                        HStack {
+                                            Image("facebook")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 25)
+                                            Image("youtube")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 25)
+                                            Image("instagram")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 25)
+                                        }
+                                        
+                                    }
+                                    
+                                    
+                                    Spacer()
+                                }
+                                .frame(width: 350, height: 800, alignment: .center)
+                                .background(Colors().purple)
+                                .cornerRadius(20)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .stroke(Color.black, lineWidth: 2)
+                                )
             
                             }
                         }
