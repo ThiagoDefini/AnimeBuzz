@@ -24,11 +24,9 @@ struct TesteView: View {
                 }
             }
         }
-        .frame(minHeight: 200)
-//        .navigationBarBackButtonHidden()
+        .navigationBarBackButtonHidden()
         .toolbarBackground(.visible, for: .navigationBar)
         .toolbarBackground(Colors().black, for: .navigationBar)
-        .navigationBarTitleDisplayMode(.large)
         .toolbar{
             ToolbarItem(placement: .principal){
                 Images().logo
@@ -46,6 +44,7 @@ struct TesteView: View {
                 })
             }
         }
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 
