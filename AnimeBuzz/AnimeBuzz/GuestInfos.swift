@@ -37,15 +37,15 @@ struct GuestInfos: View {
                 Image("facebook")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 25)
+                    .frame(width: 40)
                 Image("youtube")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 25)
+                    .frame(width: 40)
                 Image("instagram")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 25)
+                    .frame(width: 40)
             }
             
         }
