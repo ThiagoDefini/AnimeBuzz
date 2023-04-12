@@ -24,33 +24,38 @@ struct OnboardingView: View {
         ZStack{
             VStack(spacing: 40) {
                 
-                ZStack(alignment: .bottom){
-                    Images().buzz
-                    Text(data.icon)
-                        .font(.custom("SF", size: CGFloat(iconSize)))
-                        .scaleEffect(isAnimating ? 1 : 0.9)
-                } // BUZZ
-                
-                VStack(alignment: data.type){
-                    if(showLine1){
-                        Text(data.bodyText.components(separatedBy: "#")[0])
-                            .font(.custom("Helvetica", size: 26))
-                            .bold()
-                            .transition(.offset(x: -800, y: 0))
-                    }
-                    if(showLine2){
-                        Text(data.bodyText.components(separatedBy: "#")[1])
-                            .font(.custom("Helvetica", size: 26))
-                            .bold()
-                            .transition(.offset(x: -800, y: 0))
-                    }
-                    if(showLine3){
-                        Text(data.bodyText.components(separatedBy: "#")[2])
-                            .font(.custom("Helvetica", size: 26))
-                            .bold()
-                            .transition(.offset(x: -800, y: 0))
-                    }
-                } // TEXTO PRINCIPAL
+                VStack(spacing: 20){
+                    ZStack(alignment: .bottom){
+                        Images().buzz
+                        Text(data.icon)
+                            .font(.custom("SF", size: CGFloat(iconSize)))
+                            .scaleEffect(isAnimating ? 1 : 0.9)
+                    } // BUZZ
+                    
+                    VStack(alignment: data.type){
+                        if(showLine1){
+                            Text(data.bodyText.components(separatedBy: "#")[0])
+                                .font(.custom(Fonts.Lato().black_italic, size: 26))
+                                .bold()
+                                .transition(.offset(x: data.offset_x, y: data.offset_y))
+                                .transition(.opacity)
+                        }
+                        if(showLine2){
+                            Text(data.bodyText.components(separatedBy: "#")[1])
+                                .font(.custom(Fonts.Lato().black_italic, size: 26))
+                                .bold()
+                                .transition(.offset(x: data.offset_x, y: data.offset_y))
+                                .transition(.opacity)
+                        }
+                        if(showLine3){
+                            Text(data.bodyText.components(separatedBy: "#")[2])
+                                .font(.custom(Fonts.Lato().black_italic, size: 26))
+                                .bold()
+                                .transition(.offset(x: data.offset_x, y: data.offset_y))
+                                .transition(.opacity)
+                        }
+                    } // TEXTO PRINCIPAL
+                } // CONTEUDO PRINCIPAL
                 
                 if(currentTab < 2){
                     Button(action: {
@@ -72,7 +77,7 @@ struct OnboardingView: View {
                     .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
                     .tint(Colors().yellow)
                     .controlSize(.large)
-                    .font(.custom("Lato", size: 22))
+                    .font(.custom(Fonts.Lato().black_italic, size: 32))
                     .foregroundColor(Color.black)
                     .overlay(
                         RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
@@ -91,7 +96,7 @@ struct OnboardingView: View {
                     .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
                     .tint(Colors().yellow)
                     .controlSize(.large)
-                    .font(.custom("Lato", size: 22))
+                    .font(.custom(Fonts.Lato().black_italic, size: 32))
                     .foregroundColor(Color.black)
                     .overlay(
                         RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
