@@ -26,29 +26,43 @@ struct StrokeText: View{
     }
 }
 
+
+
 struct SelectEventView: View{
     var events: [Event] = [Event(city: "Porto Alegre", dates: [], guests: [], attractions: [], map: "", imageName: Images().poa), Event(city: "Portão", dates: [], guests: [], attractions: [], map: "", imageName: Images().portao)]
     var body: some View {
         NavigationStack{
             ZStack{
+                VStack(spacing: 0){
+                    Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
+                    ZStack{
                 Colors().pink
-                //                    .ignoresSafeArea()
-                VStack{
-                    Images().titulo_eventos
-                    Spacer()
+                    .edgesIgnoringSafeArea(.bottom)
+                    VStack{
+                        Images().titulo_eventos
+                        Spacer()
+                    
                 }
-                ScrollView{
-                    StrokeText(text: "eventos", width: 2, color: .black)
-                        .foregroundColor(.white)
-                        .font(.system(size: 75, weight: .bold))
-                        .padding(.vertical)
-                    
-                    ForEach(events, id: \.self){ event in
-                        event.getImageName()
+                        ScrollView{
+                            StrokeText(text: "eventos", width: 2, color: .black)
+                                .foregroundColor(.white)
+                                .font(.system(size: 75, weight: .bold))
+                                .padding(.vertical)
+                            
+                            ForEach(events, id: \.self){ event in
+                                NavigationLink{
+                                    TabBarNews()
+                                }label: {
+                                    event.getImageName()
+                                }
+                            }}
+                        .scrollIndicators(.hidden)
                     }
-                    
                 }
             }
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(Colors().black, for: .navigationBar)
+            .toolbar(.visible, for: .navigationBar)
             .toolbar{
                 ToolbarItem(placement: .principal){
                     Images().logo
@@ -66,8 +80,11 @@ struct SelectEventView: View{
                         Label("Send", systemImage: "at")
                             .padding(.top, 100)
                     })
+                    
                 }
+                
             }
+            
         }
         
     }
