@@ -12,7 +12,6 @@ struct OnboardingView: View {
     var data: OnboardingData
     
     @State private var isAnimating: Bool = false
-    @Binding var btnCornerRadius: Double
     @Binding var iconSize: Double
     @Binding var currentTab: Int
     
@@ -22,9 +21,9 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack{
-            VStack(spacing: 40) {
+            VStack(spacing: padding1) {
                 
-                VStack(spacing: 20){
+                VStack(spacing: padding2){
                     ZStack(alignment: .bottom){
                         Images().buzz
                         Text(data.icon)
@@ -35,14 +34,14 @@ struct OnboardingView: View {
                     VStack(alignment: data.type){
                         if(showLine1){
                             Text(data.bodyText.components(separatedBy: "#")[0])
-                                .font(.custom(Fonts.Lato().black_italic, size: 26))
+                                .modifier(title3())
                                 .bold()
                                 .transition(.offset(x: data.offset_x, y: data.offset_y))
                                 .transition(.opacity)
                         }
                         if(showLine2){
                             Text(data.bodyText.components(separatedBy: "#")[1])
-                                .font(.custom(Fonts.Lato().black_italic, size: 26))
+                                .modifier(title3())
                                 .bold()
                                 .transition(.offset(x: data.offset_x, y: data.offset_y))
                                 .transition(.opacity)
@@ -74,14 +73,15 @@ struct OnboardingView: View {
                     }
                     } // CONTINUE BUTTON
                     .buttonStyle(.borderedProminent)
-                    .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
+                    .buttonBorderShape(.roundedRectangle(radius: radius))
                     .tint(Colors().yellow)
                     .controlSize(.large)
-                    .font(.custom(Fonts.Lato().black_italic, size: 32))
+//                    .font(.custom(Fonts.Lato().black_italic, size: 32))
+                    .modifier(title2())
                     .foregroundColor(Color.black)
                     .overlay(
-                        RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
-                            .stroke(Color.black, lineWidth: 2))
+                        RoundedRectangle(cornerRadius: radius)
+                            .stroke(Color.black, lineWidth: borderWidth))
                 } // BOTÃO DE CONTINUAR
                 else {
                     NavigationLink(destination: TesteView(),
@@ -93,14 +93,15 @@ struct OnboardingView: View {
                             .italic()
                     }) // CONTINUE BUTTON
                     .buttonStyle(.borderedProminent)
-                    .buttonBorderShape(.roundedRectangle(radius: CGFloat(btnCornerRadius)))
+                    .buttonBorderShape(.roundedRectangle(radius: radius))
                     .tint(Colors().yellow)
                     .controlSize(.large)
-                    .font(.custom(Fonts.Lato().black_italic, size: 32))
+//                    .font(.custom(Fonts.Lato().black_italic, size: 32))
+                    .modifier(title2())
                     .foregroundColor(Color.black)
                     .overlay(
-                        RoundedRectangle(cornerRadius: CGFloat(btnCornerRadius))
-                            .stroke(Color.black, lineWidth: 2))
+                        RoundedRectangle(cornerRadius: radius)
+                            .stroke(Color.black, lineWidth: borderWidth))
                 } // BOTÃO DE AVANÇAR
                 
 //                if(data.id != 0){ // BOTÃO DE VOLTAR

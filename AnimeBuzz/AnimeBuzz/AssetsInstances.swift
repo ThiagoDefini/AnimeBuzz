@@ -98,3 +98,50 @@ class Fonts{
         var bold = "Helvetica-Bold"
     }
 }
+
+//FONT SIZES
+struct title: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(Fonts.Helvetica().bold, size: 60))
+    }
+}
+struct title2: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(Fonts.Lato().black_italic, size: 36))
+    }
+}
+struct title3: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(Fonts.Lato().black_italic, size: 26))
+    }
+}
+struct label: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(Fonts.Helvetica().light, size: 16))
+    }
+}
+struct body: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.custom(Fonts.Helvetica().regular, size: 18))
+    }
+}
+
+//GENERAL SIZES
+struct iconSize: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .frame(width: 40, height: 40)
+    }
+}
+
+var smallRadius: CGFloat = 5.0
+var radius: CGFloat = 15
+var borderWidth: CGFloat = 2.0
+var padding1: CGFloat = 40.0
+var padding2: CGFloat = 22.0
+var largePadding: CGFloat = 60.0
