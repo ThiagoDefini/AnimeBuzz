@@ -18,7 +18,7 @@ struct TesteView: View {
                         Colors().pink.edgesIgnoringSafeArea(.bottom)
                         //COMEÇO DO CORPO DA VIEW--
                         ScrollView(.vertical){
-                            Text("porto alegre").modifier(title())
+                            Text("porto alegre").modifier(title()).foregroundColor(.white)
                             Images.Convidados.Pequeno().charles_emmanuel
                         }.scrollIndicators(.hidden).padding()
 
@@ -31,12 +31,12 @@ struct TesteView: View {
         }
         .navigationBarBackButtonHidden()
         .toolbarBackground(.visible, for: .navigationBar)
-        .toolbarBackground(Colors().black, for: .navigationBar)
+        .toolbarBackground(Colors().green, for: .navigationBar)
         .toolbar{
             ToolbarItem(placement: .principal){
                 Images().logo
                     .resizable()
-                    .padding(.top, 40.0)
+                    .padding(.top, padding1)
                     .frame(width: 100.0, height: 100.0)
             }
             
