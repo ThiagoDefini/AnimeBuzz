@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C48554E29E7171800C54D88 /* SelectEventView .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C48554D29E7171800C54D88 /* SelectEventView .swift */; };
 		4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024A29E5DF940001748E /* TabBarNews.swift */; };
 		4C86024D29E5E7C70001748E /* SiteEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024C29E5E7C70001748E /* SiteEvento.swift */; };
 		4CA98ECF29E5C70C00CFF9B1 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C48554D29E7171800C54D88 /* SelectEventView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelectEventView .swift"; sourceTree = "<group>"; };
 		4C86024A29E5DF940001748E /* TabBarNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNews.swift; sourceTree = "<group>"; };
 		4C86024C29E5E7C70001748E /* SiteEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteEvento.swift; sourceTree = "<group>"; };
 		4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				7BBBCDAC29E49E52006DD381 /* ContentView.swift */,
 				4C86024A29E5DF940001748E /* TabBarNews.swift */,
 				4C86024C29E5E7C70001748E /* SiteEvento.swift */,
+				4C48554D29E7171800C54D88 /* SelectEventView .swift */,
 				7BBBCDAE29E49E52006DD381 /* Assets.xcassets */,
 				7BBBCDB029E49E52006DD381 /* Preview Content */,
 				9202CA2F29E5C0860076D157 /* AssetsInstances.swift */,
@@ -174,6 +177,7 @@
 			files = (
 				9202CA3029E5C0860076D157 /* AssetsInstances.swift in Sources */,
 				92A88BAE29E4A21B004495AB /* OnboardingData.swift in Sources */,
+				4C48554E29E7171800C54D88 /* SelectEventView .swift in Sources */,
 				92A88BB229E4A253004495AB /* OnboardingView.swift in Sources */,
 				7BBBCDAD29E49E52006DD381 /* ContentView.swift in Sources */,
 				4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */,
@@ -182,7 +186,6 @@
 				7BBBCDAB29E49E52006DD381 /* AnimeBuzzApp.swift in Sources */,
 				4CA98ECF29E5C70C00CFF9B1 /* Guest.swift in Sources */,
 				4C86024D29E5E7C70001748E /* SiteEvento.swift in Sources */,
-
 				928AF8D829E5E8A900D0D404 /* TesteView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
