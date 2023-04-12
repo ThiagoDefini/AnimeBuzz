@@ -59,7 +59,6 @@ class Images{
             var moo_chan = Image("Moo-chan Maiors")
         }
     }
-}
 
 
 class Icons{
