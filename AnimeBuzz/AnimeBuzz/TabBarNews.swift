@@ -83,8 +83,14 @@ struct TabBarNews: View {
                                 
                                 VStack{
                                     VStack{
-                                        Text ("Convidados mais")
-                                            .foregroundColor(.white)
+                                        
+                                        HStack{
+                                            Text ("Convidados")
+                                                .foregroundColor(.white)
+                                            Text ("mais")
+                                                .foregroundColor(Colors().yellow)
+                                        }
+                                        
                                         Text ("do que especiais")
                                             .foregroundColor(Colors().yellow)
                                     }

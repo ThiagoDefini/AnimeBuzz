@@ -10,12 +10,10 @@ import SwiftUI
 struct ContentView: View {
     
     @State private var isAnimating: Bool = false
-    @State private var btnCornerRadius: Double = 15.0
     @State private var iconSize: Double = 90.0
     @State private var currentTab: Int = 0
     
-    init(btnCornerRadius: Double = 15.0, iconSize: Double = 90.0, currentTab: Int = 0) {
-        self.btnCornerRadius = btnCornerRadius
+    init(iconSize: Double = 90.0, currentTab: Int = 0) {
         self.iconSize = iconSize
         self.currentTab = currentTab
     }
@@ -27,18 +25,18 @@ struct ContentView: View {
                 Images().white_bg
                     .resizable(resizingMode: .stretch)
                 
-                VStack(spacing: 40){
+                VStack(spacing: padding1){
                     Spacer()
                     Images().logo
                         .resizable()
                         .frame(width:150, height:100)
-                        .padding(.top, 20)
+                        .padding(.top, padding2)
                         .scaleEffect(isAnimating ? 1 : 0.9)
                     
                     TabView(selection: $currentTab,
                             content:  {
                         ForEach(OnboardingData.list) { viewData in
-                            OnboardingView(data: viewData, btnCornerRadius: $btnCornerRadius, iconSize: $iconSize, currentTab: $currentTab)
+                            OnboardingView(data: viewData, iconSize: $iconSize, currentTab: $currentTab)
                                 .tag(viewData.id)
                         }
                     })
@@ -55,7 +53,7 @@ struct ContentView: View {
                         label: do {
                             Text("Voltar").underline().foregroundColor(Color.gray)
                         }
-                        }.padding(.bottom, 60)
+                        }.padding(.bottom, largePadding)
                     } // BOTÃO DE VOLTAR
                     else{
                         Button(action: {
@@ -66,7 +64,7 @@ struct ContentView: View {
                         label: do {
                             Text("Voltar").underline().foregroundColor(Color.gray)
                         }
-                        }.padding(.bottom, 60).hidden()
+                        }.padding(.bottom, largePadding).hidden()
                     }
                 }
             }.ignoresSafeArea()
