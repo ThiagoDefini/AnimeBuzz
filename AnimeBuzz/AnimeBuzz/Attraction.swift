@@ -38,15 +38,15 @@ enum attractionType{
         case .atividadeLivre:
             return Colors().magenta
         case .presencaEspecial:
-//            return Colors().gold
-            return Color.yellow
+            return Colors().gold
         case .convidadoEspecial:
             return Colors().lime
         case .concurso:
             return Colors().cian
         case .bandaJRock:
-//            return Colors().flamingo
-            return Color.pink
+            return Colors().flamingo
+        case .encerramento:
+            return Colors().magenta
         }
     }
     
@@ -191,8 +191,8 @@ var attraction10: Attraction = Attraction(date: "15/04", name: "Encerramento", t
 
 // DATA 16/04
 
-var attraction11: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")
-
-var attraction12: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: attractionType, description: "", place: "", favorited: false, mapName: "")
-
-var attraction13: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")
+//var attraction11: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")
+//
+//var attraction12: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: attractionType, description: "", place: "", favorited: false, mapName: "")
+//
+//var attraction13: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")

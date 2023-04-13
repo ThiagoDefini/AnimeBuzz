@@ -94,3 +94,7 @@ class Event: Hashable{
         self.imageName = imageName
     }
 }
+
+
+var event1 = Event(city: "Porto Alegre", dates: [], guests: guests1, attractions: [], map: "", imageName: Images().poa)
+var event2 = Event(city: "Portão", dates: [], guests: guests2, attractions: [], map: "", imageName: Images().portao)

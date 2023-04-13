@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct tabViewScreen: View {
+    
+    var event: Event
+    
     var body: some View {
         TabView{
             //adicionar o nome certo das views quando prontas
-            TabBarNews()
+            TabBarNews(event: event)
                 .tabItem(){
                     VStack{
                         Icons().noticias
@@ -51,6 +54,6 @@ struct tabViewScreen: View {
 
 struct tabViewScreen_Previews: PreviewProvider {
     static var previews: some View {
-        tabViewScreen()
+        tabViewScreen(event: event1)
     }
 }
