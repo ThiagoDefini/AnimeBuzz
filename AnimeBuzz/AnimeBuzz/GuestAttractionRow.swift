@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AttractionRow: View {
+struct GuestAttractionRow: View {
     var attraction: Attraction
     
     var body: some View {
@@ -18,6 +18,9 @@ struct AttractionRow: View {
                     Text(attraction.getAttractionType().description)
                         .padding(10)
                     Spacer()
+                    Icons().estrela_riscada
+                        .padding(10)
+                        .foregroundColor(.white)
                 }
                 Spacer()
                 HStack{
@@ -31,19 +34,20 @@ struct AttractionRow: View {
                 .padding(5)
                 
             }
+            .foregroundColor(.black)
         }
-        .cornerRadius(20)
-        .frame(width: 350 ,height: 50)
+        .cornerRadius(radius)
         .overlay(
             RoundedRectangle(cornerRadius: radius)
                 .stroke(Color.black, lineWidth: borderWidth))
+        .frame(width: 350 ,height: 50)
         
         
     }
 }
 
-struct AttractionRow_Previews: PreviewProvider {
+struct GuestAttractionRow_Previews: PreviewProvider {
     static var previews: some View {
-        AttractionRow(attraction: testeAtracoes)
+        GuestAttractionRow(attraction: testeAtracoes)
     }
 }
