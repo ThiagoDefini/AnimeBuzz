@@ -93,5 +93,4 @@ class Event: Hashable{
     func setImageName(imageName: Image){
         self.imageName = imageName
     }
-    
 }

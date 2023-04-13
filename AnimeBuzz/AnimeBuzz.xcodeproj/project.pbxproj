@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4C15B97329E7321900E4D865 /* GuestInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C15B97229E7321900E4D865 /* GuestInfos.swift */; };
+		4C2843F629E87B83003F287C /* TabBarSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2843F529E87B83003F287C /* TabBarSchedule.swift */; };
+		4C2843F929E8828F003F287C /* AttractionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2843F829E8828F003F287C /* AttractionRow.swift */; };
 		4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024A29E5DF940001748E /* TabBarNews.swift */; };
 		4C86024D29E5E7C70001748E /* SiteExterno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024C29E5E7C70001748E /* SiteExterno.swift */; };
 		4CA98ECF29E5C70C00CFF9B1 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		4C15B97229E7321900E4D865 /* GuestInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestInfos.swift; sourceTree = "<group>"; };
+		4C2843F529E87B83003F287C /* TabBarSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarSchedule.swift; sourceTree = "<group>"; };
+		4C2843F829E8828F003F287C /* AttractionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionRow.swift; sourceTree = "<group>"; };
 		4C86024A29E5DF940001748E /* TabBarNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNews.swift; sourceTree = "<group>"; };
 		4C86024C29E5E7C70001748E /* SiteExterno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteExterno.swift; sourceTree = "<group>"; };
 		4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
@@ -107,11 +111,11 @@
 				927063EB29E716340038E8FD /* Info.plist */,
 				927063D629E712240038E8FD /* Fonts */,
 				92A88BAC29E4A200004495AB /* Onboarding */,
+				7BBBCDAA29E49E52006DD381 /* AnimeBuzzApp.swift */,
 				4CA98ED029E5DA0D00CFF9B1 /* Attraction.swift */,
 				4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */,
 				7BEA5D7529E5C45600E36E1B /* Event.swift */,
 				7B94C6B029E5E20A005B549B /* SelectEventView.swift */,
-				7BBBCDAA29E49E52006DD381 /* AnimeBuzzApp.swift */,
 				7C6F830029E5F5D9000E191D /* tabViewScreen.swift */,
 				7BD9537429E892CC0009C517 /* GuestAttractionRow.swift */,
 				7BD9537629E893620009C517 /* GuestView.swift */,
@@ -119,6 +123,8 @@
 				7C57437529E86EB800A7E796 /* AttractionView.swift */,
 				7C02246929E7411600E6536C /* MapView.swift */,
 				4C86024A29E5DF940001748E /* TabBarNews.swift */,
+				4C2843F529E87B83003F287C /* TabBarSchedule.swift */,
+				4C2843F829E8828F003F287C /* AttractionRow.swift */,
 				4C15B97229E7321900E4D865 /* GuestInfos.swift */,
 				4C86024C29E5E7C70001748E /* SiteExterno.swift */,
 				7BBBCDAE29E49E52006DD381 /* Assets.xcassets */,
@@ -245,6 +251,7 @@
 			files = (
 				9202CA3029E5C0860076D157 /* AssetsInstances.swift in Sources */,
 				7C6F830129E5F5D9000E191D /* tabViewScreen.swift in Sources */,
+				4C2843F929E8828F003F287C /* AttractionRow.swift in Sources */,
 				92A88BAE29E4A21B004495AB /* OnboardingData.swift in Sources */,
 				7C57437629E86EB800A7E796 /* AttractionView.swift in Sources */,
 				92A88BB229E4A253004495AB /* OnboardingView.swift in Sources */,
@@ -254,6 +261,7 @@
 				4C15B97329E7321900E4D865 /* GuestInfos.swift in Sources */,
 				7BD9537729E893620009C517 /* GuestView.swift in Sources */,
 				4CA98ED129E5DA0D00CFF9B1 /* Attraction.swift in Sources */,
+				4C2843F629E87B83003F287C /* TabBarSchedule.swift in Sources */,
 				7C02246A29E7411600E6536C /* MapView.swift in Sources */,
 				7BEA5D7629E5C45600E36E1B /* Event.swift in Sources */,
 				7BBBCDAB29E49E52006DD381 /* AnimeBuzzApp.swift in Sources */,
