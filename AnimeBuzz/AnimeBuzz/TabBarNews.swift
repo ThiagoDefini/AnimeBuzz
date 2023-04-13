@@ -10,7 +10,6 @@ import SwiftUI
 struct TicketButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .font(.custom("Helvica", size: 10.0))
         HStack{
             Spacer()
             
@@ -28,6 +27,7 @@ struct TicketButton: ButtonStyle {
             }
             .bold()
             .italic()
+            .modifier(title3())
             Spacer()
             
         }
@@ -44,10 +44,10 @@ struct TicketButton: ButtonStyle {
 struct TabBarNews: View {
     
     var arrayGuests: [Guest] = [guest1, guest2, guest3, guest4, guest5, guest6]
-
+    
     var body: some View {
         
-
+        
         NavigationStack {
             
             ZStack {
@@ -60,26 +60,23 @@ struct TabBarNews: View {
                             Images.Titulos().titulo_noticias_poa
                                 .ignoresSafeArea()
                             Spacer()
-                            
                         }
                         
                         VStack{
                             ScrollView{
-                                
                                 HStack{
                                     StrokeText(text: "porto alegre", width: 2, color: .black)
                                         .foregroundColor(.white)
                                         .font(.system(size: 64, weight: .bold))
                                 }
-                                .padding(.bottom, 10)
+                                .padding(.bottom, padding1)
                                 
                                 NavigationLink("") {
-                                    SiteEvento()
+                                    SiteExterno()
                                 }
                                 .buttonStyle(TicketButton())
-                                .padding(.bottom, 40)
-
-
+                                .padding(.bottom, padding2)
+                                .padding(.top, -10)
                                 
                                 VStack{
                                     VStack{
@@ -87,19 +84,22 @@ struct TabBarNews: View {
                                         HStack{
                                             Text ("Convidados")
                                                 .foregroundColor(.white)
+                                            
                                             Text ("mais")
                                                 .foregroundColor(Colors().yellow)
+                                            
                                         }
+                                        .modifier(title2())
                                         
                                         Text ("do que especiais")
                                             .foregroundColor(Colors().yellow)
+                                            .modifier(title2())
                                     }
                                     .bold()
                                     .font(.system(size: 36))
                                     .italic()
                                     .padding(.top, 20)
                                     
-
                                     VStack{
                                         ForEach(arrayGuests, id: \.self) {guest in
                                             GuestInfos(guest: guest)
@@ -115,7 +115,7 @@ struct TabBarNews: View {
                                     RoundedRectangle(cornerRadius: 20)
                                         .stroke(Color.black, lineWidth: 2)
                                 )
-            
+                                
                             }
                         }
                     }
@@ -145,7 +145,7 @@ struct TabBarNews: View {
             }
         }
     }
-
+    
     struct StrokeText: View {
         let text: String
         let width: CGFloat
