@@ -55,7 +55,9 @@ struct SelectEventView: View{
                                 }label: {
                                     event.getImageName()
                                 }
-                            }}
+                            }
+                            
+                        }
                         .scrollIndicators(.hidden)
                     }
                 }

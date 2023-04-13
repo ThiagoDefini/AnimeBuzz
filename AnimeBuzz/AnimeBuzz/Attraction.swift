@@ -6,13 +6,13 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum attractionType{
     case atividadeLivre
     case presencaEspecial
     case convidadoEspecial
     case concurso
-    case mercadoGamer
     case bandaJRock
     
     var description: String{
@@ -25,15 +25,40 @@ enum attractionType{
             return "Convidade Especial"
         case .concurso:
             return "Concurso"
-        case .mercadoGamer:
-            return "Mercado Gamer"
         case .bandaJRock:
             return "Banda JRock"
         }
     }
+    
+    var color: Color{
+        switch self{
+        case .atividadeLivre:
+            return Colors().magenta
+        case .presencaEspecial:
+//            return Colors().gold
+            return Color.yellow
+        case .convidadoEspecial:
+            return Colors().lime
+        case .concurso:
+            return Colors().cian
+        case .bandaJRock:
+//            return Colors().flamingo
+            return Color.pink
+        }
+    }
+    
 }
 
-class Attraction: Identifiable{
+class Attraction:  Hashable{
+    static func == (lhs: Attraction, rhs: Attraction) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    var id: String = UUID().uuidString
     private var time: String
     private var attractionType: attractionType
     private var description: String

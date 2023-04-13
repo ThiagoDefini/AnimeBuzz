@@ -14,7 +14,7 @@ struct GuestView: View {
         ScrollView{
             ZStack{
                 Colors().pink
-                    .ignoresSafeArea()
+                    .edgesIgnoringSafeArea(.bottom)
                 VStack{
                     ZStack{
                         Images().banner
@@ -46,10 +46,11 @@ struct GuestView: View {
                         Spacer()
                     }
                     
-//                    List(guest.getListOfattraction()){attraction in
-//                        Text(attraction.getDescription())
-//                        
-//                    }
+                    ForEach(guest.getListOfattraction(), id: \.self){ attraction in
+                        AttractionRow(attraction: attraction)
+                    }
+                    
+                    
                     .padding(.horizontal)
                     .foregroundColor(Colors().pink)
                     
