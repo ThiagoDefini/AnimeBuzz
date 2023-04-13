@@ -39,7 +39,7 @@ struct SelectEventView: View{
                 Colors().pink
                     .edgesIgnoringSafeArea(.bottom)
                     VStack{
-                        Titulos().titulo_eventos
+                        Images.Titulos().titulo_eventos
                         Spacer()
                     
                 }
