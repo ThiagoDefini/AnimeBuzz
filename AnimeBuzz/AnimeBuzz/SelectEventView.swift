@@ -54,7 +54,7 @@ struct SelectEventView: View{
                             
                             ForEach(events, id: \.self){ event in
                                 NavigationLink{
-                                    TabBarNews()
+                                    tabViewScreen()
                                 }label: {
                                     event.getImageName()
                                 }
@@ -65,6 +65,7 @@ struct SelectEventView: View{
                     }
                 }
             }
+            .navigationBarBackButtonHidden()
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Colors().black, for: .navigationBar)
             .toolbar(.visible, for: .navigationBar)
