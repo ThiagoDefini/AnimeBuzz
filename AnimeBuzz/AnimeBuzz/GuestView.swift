@@ -46,10 +46,10 @@ struct GuestView: View {
                         Spacer()
                     }
                     
-                    List(guest.getListOfattraction()){attraction in
-                        Text(attraction.getDescription())
-                        
-                    }
+//                    List(guest.getListOfattraction()){attraction in
+//                        Text(attraction.getDescription())
+//                        
+//                    }
                     .padding(.horizontal)
                     .foregroundColor(Colors().pink)
                     
