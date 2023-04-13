@@ -42,8 +42,7 @@ struct TicketButton: ButtonStyle {
 }
 
 struct TabBarNews: View {
-    
-    var arrayGuests: [Guest] = [guest1, guest2, guest3, guest4, guest5, guest6]
+    var event: Event
     
     var body: some View {
         
@@ -64,7 +63,7 @@ struct TabBarNews: View {
                         VStack{
                             ScrollView{
                                 HStack{
-                                    StrokeText(text: "porto alegre", width: 2, color: .black)
+                                    StrokeText(text: event.getCity(), width: 2, color: .black)
                                         .foregroundColor(.white)
                                         .font(.system(size: 64, weight: .bold))
                                 }
@@ -100,7 +99,7 @@ struct TabBarNews: View {
                                     .padding(.top, 20)
                                     
                                     VStack{
-                                        ForEach(arrayGuests, id: \.self) {guest in
+                                        ForEach(event.getGuests(), id: \.self) {guest in
                                             GuestInfos(guest: guest)
                                         }
                                     }
@@ -167,7 +166,7 @@ struct TabBarNews: View {
     
     struct TabBarNews_Previews: PreviewProvider {
         static var previews: some View {
-            TabBarNews()
+            TabBarNews(event: event1)
         }
     }
 }

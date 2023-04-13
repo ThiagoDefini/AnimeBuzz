@@ -38,15 +38,14 @@ enum attractionType{
         case .atividadeLivre:
             return Colors().magenta
         case .presencaEspecial:
-//            return Colors().gold
-            return Color.yellow
+            return Colors().gold
         case .convidadoEspecial:
             return Colors().lime
         case .concurso:
             return Colors().cian
         case .bandaJRock:
-//            return Colors().flamingo
-            return Color.pink
+            return Colors().flamingo
+
         case .encerramento:
             return Colors().magenta
         }

@@ -27,7 +27,7 @@ struct StrokeText: View{
 }
 
 struct SelectEventView: View{
-    var events: [Event] = [Event(city: "Porto Alegre", dates: [], guests: [], attractions: [], map: "", imageName: Images().poa), Event(city: "Portão", dates: [], guests: [], attractions: [], map: "", imageName: Images().portao)]
+    var events: [Event]
     var body: some View {
         NavigationStack{
             ZStack{
@@ -62,7 +62,7 @@ struct SelectEventView: View{
                             
                             ForEach(events, id: \.self){ event in
                                 NavigationLink{
-                                    tabViewScreen()
+                                    tabViewScreen(event: event)
                                 }label: {
                                     event.getImageName()
                                 }
@@ -105,6 +105,6 @@ struct SelectEventView: View{
 
 struct SelectEventView_Previews: PreviewProvider {
     static var previews: some View {
-        SelectEventView()
+        SelectEventView(events: [event1, event2])
     }
 }
