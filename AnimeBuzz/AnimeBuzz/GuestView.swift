@@ -14,13 +14,14 @@ struct GuestView: View {
         ScrollView{
             ZStack{
                 Colors().pink
-                    .edgesIgnoringSafeArea(.bottom)
+//                    .edgesIgnoringSafeArea(.bottom)
                 VStack{
                     ZStack{
                         Images().banner
                             .padding()
                         
                         Text(guest.getName())
+                            .modifier(title3())
                         
                     }
                     
@@ -33,6 +34,7 @@ struct GuestView: View {
                     
                     Text(guest.getDescription())
                         .padding(.horizontal)
+                        .modifier(AnimeBuzz.body())
                     
                     HStack{
                         //Social Medias
@@ -47,7 +49,7 @@ struct GuestView: View {
                     }
                     
                     ForEach(guest.getListOfattraction(), id: \.self){ attraction in
-                        AttractionRow(attraction: attraction)
+                        GuestAttractionRow(attraction: attraction)
                     }
                     
                     
@@ -56,6 +58,7 @@ struct GuestView: View {
                     
                 }
             }
+            .ignoresSafeArea()
         }
     }
 }

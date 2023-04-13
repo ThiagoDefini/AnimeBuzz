@@ -17,6 +17,7 @@ struct GuestAttractionRow: View {
                 HStack{
                     Text(attraction.getAttractionType().description)
                         .padding(10)
+                        .modifier(title3())
                     Spacer()
                     Icons().estrela_riscada
                         .padding(10)
@@ -24,11 +25,11 @@ struct GuestAttractionRow: View {
                 }
                 Spacer()
                 HStack{
-                    Image(systemName: "timer")
+                    Icons().relogio
                     Text(attraction.getTime())
-                    Image(systemName: "person.fill")
+                    Icons().atividade
                     Text(attraction.getAttractionType().description)
-                    Image(systemName: "mappin")
+                    Icons().local
                     Text(attraction.getPlace())
                 }
                 .padding(5)
