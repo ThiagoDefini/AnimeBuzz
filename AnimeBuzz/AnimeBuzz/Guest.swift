@@ -69,15 +69,15 @@ class Guest: Hashable {
     func getInstagram() -> String?{
         return self.instagram
     }
-
+    
     func setInstagram(instagram: String){
         self.instagram = instagram
     }
-
+    
     func getFacebook() -> String?{
         return self.facebook
     }
-
+    
     func setFacebook(facebook: String){
         self.facebook = facebook
     }
@@ -108,7 +108,7 @@ class Guest: Hashable {
     func getListOfattraction() -> [Attraction]{
         return listOfattraction
     }
-
+    
     func addListOfattraction(listOfattraction: Attraction){
         self.listOfattraction.append(listOfattraction)
     }
