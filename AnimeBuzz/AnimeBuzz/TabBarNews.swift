@@ -47,7 +47,6 @@ struct TabBarNews: View {
     
     var body: some View {
         
-        
         NavigationStack {
             
             ZStack {
@@ -143,6 +142,7 @@ struct TabBarNews: View {
                     })
                 }
             }
+//            tabViewScreen()
         }
     }
     

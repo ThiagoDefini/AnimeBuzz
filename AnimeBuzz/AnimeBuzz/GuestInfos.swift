@@ -17,7 +17,7 @@ struct GuestInfos: View {
             
             VStack{
                 //colocar NavigationLink AQUI (){
-
+                
                 Image(guest.getSmallImage())
                     .resizable()
                     .scaledToFit()
@@ -27,7 +27,7 @@ struct GuestInfos: View {
                     .font(.system(size: 24))
                 Text(guest.getCategory())
                     .font(.system(size: 16))
-
+                
             }
             .padding()
             .bold()

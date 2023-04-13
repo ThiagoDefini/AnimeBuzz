@@ -26,8 +26,6 @@ struct StrokeText: View{
     }
 }
 
-
-
 struct SelectEventView: View{
     var events: [Event] = [Event(city: "Porto Alegre", dates: [], guests: [], attractions: [], map: "", imageName: Images().poa), Event(city: "Portão", dates: [], guests: [], attractions: [], map: "", imageName: Images().portao)]
     var body: some View {
@@ -36,6 +34,15 @@ struct SelectEventView: View{
                 VStack(spacing: 0){
                     Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
                     ZStack{
+
+                        Colors().pink
+                            .edgesIgnoringSafeArea(.bottom)
+                        VStack{
+                            Images.Titulos().titulo_eventos
+                            Spacer()
+                            
+                        }
+
                 Colors().pink
                     .edgesIgnoringSafeArea(.bottom)
                     VStack{
@@ -43,6 +50,7 @@ struct SelectEventView: View{
                         Spacer()
                     
                 }
+
                         ScrollView{
                             ZStack{
                                 Images.Titulos().titulo_eventos
@@ -54,7 +62,7 @@ struct SelectEventView: View{
                             
                             ForEach(events, id: \.self){ event in
                                 NavigationLink{
-                                    TabBarNews()
+                                    tabViewScreen()
                                 }label: {
                                     event.getImageName()
                                 }
@@ -65,6 +73,7 @@ struct SelectEventView: View{
                     }
                 }
             }
+            .navigationBarBackButtonHidden()
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Colors().black, for: .navigationBar)
             .toolbar(.visible, for: .navigationBar)
@@ -74,7 +83,7 @@ struct SelectEventView: View{
                         .resizable()
                         .padding(.top, 40.0)
                         .frame(width: 100.0, height: 100.0)
-    
+                    
                 }
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing){
                     Button(action:{}, label:{

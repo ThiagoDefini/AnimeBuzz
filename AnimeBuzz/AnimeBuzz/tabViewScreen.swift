@@ -32,7 +32,7 @@ struct tabViewScreen: View {
                         Text("Cronograma")
                     }
                 }
-            ContentView()
+            MapView()
                 .tabItem(){
                     VStack{
                         Icons().mapa
@@ -44,7 +44,7 @@ struct tabViewScreen: View {
         .onAppear(){
             UITabBar.appearance().backgroundColor = UIColor.black
             UITabBar.appearance().unselectedItemTintColor = UIColor.white
-                
+            
         }
     }
 }
