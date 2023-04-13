@@ -26,7 +26,7 @@ struct GuestAttractionRow: View {
                 Spacer()
                 HStack{
                     Icons().relogio
-                    Text(attraction.getTime())
+                    Text(attraction.getTimeBegin() + " - " + attraction.getTimeEnding())
                     Icons().atividade
                     Text(attraction.getAttractionType().description)
                     Icons().local

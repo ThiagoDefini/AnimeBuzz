@@ -39,15 +39,18 @@ struct SelectEventView: View{
                 Colors().pink
                     .edgesIgnoringSafeArea(.bottom)
                     VStack{
-                        Images.Titulos().titulo_eventos
+                        
                         Spacer()
                     
                 }
                         ScrollView{
-                            StrokeText(text: "eventos", width: 2, color: .black)
-                                .foregroundColor(.white)
-                                .font(.system(size: 75, weight: .bold))
-                                .padding(.vertical)
+                            ZStack{
+                                Images.Titulos().titulo_eventos
+                                StrokeText(text: "eventos", width: 2, color: .black)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 75, weight: .bold))
+                                    .padding(.vertical)
+                            }
                             
                             ForEach(events, id: \.self){ event in
                                 NavigationLink{

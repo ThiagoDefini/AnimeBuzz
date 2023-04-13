@@ -11,54 +11,81 @@ struct GuestView: View {
     var guest: Guest
     
     var body: some View {
-        ScrollView{
-            ZStack{
-                Colors().pink
-//                    .edgesIgnoringSafeArea(.bottom)
-                VStack{
-                    ZStack{
-                        Images().banner
+        ZStack{
+            Colors().pink
+                .ignoresSafeArea(.all)
+            ScrollView{
+                ZStack{
+                    
+                    VStack{
+                        ZStack{
+                            Images().banner
+                                .padding()
+                            
+                            Text(guest.getName())
+                                .modifier(title3())
+                            
+                        }
+                        
+                        Image(guest.getBigImage())
+                            .resizable()
+                            .frame(width: 300, height: 300)
+                        
+                        Text(guest.getCategory())
                             .padding()
                         
-                        Text(guest.getName())
-                            .modifier(title3())
+                        Text(guest.getDescription())
+                            .padding(.horizontal)
+                            .modifier(AnimeBuzz.body())
                         
-                    }
-                    
-                    Image(guest.getBigImage())
-                        .resizable()
-                        .frame(width: 300, height: 300)
-                    
-                    Text(guest.getCategory())
-                        .padding()
-                    
-                    Text(guest.getDescription())
+                        HStack {
+                            
+                            if guest.getInstagram() != nil {
+                                
+                                Image("instagram")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40)
+                            }
+                            
+                            if guest.getFacebook() != nil {
+                                Image("facebook")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40)
+                            }
+                            
+                            if guest.getYoutube() != nil {
+                                Image("youtube")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40)
+                            }
+                        }
                         .padding(.horizontal)
-                        .modifier(AnimeBuzz.body())
-                    
-                    HStack{
-                        //Social Medias
-                        Text("Social Medias")
-                            .padding()
+                        
+                        HStack{
+                            StrokeText(text: "Aparições:", width: 2, color: .black)
+                                .foregroundColor(.white)
+                                .modifier(title2())
+                                .padding(.vertical)
+                                .padding(.leading)
+                            Spacer()
+                        }
+                        .padding(.vertical)
+                        
+                        ForEach(guest.getListOfattraction(), id: \.self){ attraction in
+                            GuestAttractionRow(attraction: attraction)
+                        }
+                        
+                        
+                        .padding(.horizontal)
+                        .foregroundColor(Colors().pink)
+                        
                     }
-                    
-                    HStack{
-                        Text("Aparições:")
-                            .padding()
-                        Spacer()
-                    }
-                    
-                    ForEach(guest.getListOfattraction(), id: \.self){ attraction in
-                        GuestAttractionRow(attraction: attraction)
-                    }
-                    
-                    
-                    .padding(.horizontal)
-                    .foregroundColor(Colors().pink)
-                    
                 }
+                //            .ignoresSafeArea()
             }
-            .ignoresSafeArea()
         }
     }
 }
