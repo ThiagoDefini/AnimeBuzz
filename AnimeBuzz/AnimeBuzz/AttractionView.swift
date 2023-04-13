@@ -11,10 +11,10 @@ import SwiftUI
 struct AttractionView: View {
     @State var attraction: Attraction
     var body: some View {
-            ZStack{
-                Colors().pink
-                    .ignoresSafeArea()
-                ScrollView{
+        ZStack{
+            Colors().pink
+                .ignoresSafeArea()
+            ScrollView{
                 VStack{
                     ZStack{
                         Images().banner
@@ -22,7 +22,7 @@ struct AttractionView: View {
                             .foregroundColor(Colors().black)
                             .modifier(title2())
                     }
-                        .padding(.bottom, padding2)
+                    .padding(.bottom, padding2)
                     Text(attraction.getDescription())
                         .foregroundColor(Colors().principal)
                         .padding(.bottom, padding2)
@@ -65,8 +65,8 @@ struct AttractionView: View {
                         .cornerRadius(radius)
                 }
             }
-                .scrollIndicators(.hidden)
-                
+            .scrollIndicators(.hidden)
+            
         }
     }
 }

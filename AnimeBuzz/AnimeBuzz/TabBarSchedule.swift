@@ -9,6 +9,10 @@ import SwiftUI
 
 struct TabBarSchedule: View {
     var body: some View {
+        
+//        var arrayAttractions: [Attraction] = [attraction1, attraction2, attraction3, attraction4, attraction5, attraction6, attraction7, attraction8, attraction9, attraction10]
+//
+        
         NavigationStack {
             
             ZStack {

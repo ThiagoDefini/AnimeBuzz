@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct AttractionRow: View {
+    
+    var atracao: Attraction
+
     var body: some View {
         
-        var arrayAttractions: [Attraction] = [attraction1, attraction2, attraction3, attraction4, attraction5, attraction6, attraction7, attraction8, attraction9, attraction10]
-
         VStack{
-            
+
             //DATA
             HStack{
-                Text ("16/04")
+                Text (atracao.getDate())
                     .modifier(title2())
                     .frame(width: 120, height: 60, alignment: .center)
                     .background(Colors().blue)
@@ -33,14 +34,14 @@ struct AttractionRow: View {
             //INFOS DO EVENTO
             VStack{
                 HStack{
-                    Text ("teste")
+                    Text (atracao.getName())
                         .modifier(title2())
                         .padding(.leading, 10)
                         .foregroundColor(.white)
                     Spacer()
                 }
                 Spacer()
-
+                
                 HStack{
                     
                     Text ("infos do evento")
@@ -64,6 +65,6 @@ struct AttractionRow: View {
 
 struct AttractionRow_Previews: PreviewProvider {
     static var previews: some View {
-        AttractionRow()
+        AttractionRow(atracao: attraction1)
     }
 }

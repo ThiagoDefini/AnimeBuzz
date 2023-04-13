@@ -138,6 +138,8 @@ class Attraction{
     
 }
 
+
+// DATA 15/04
 var testeAtracoes: Attraction = Attraction(date: "15/04", name: "Animeke", timeBegin: "16h", timeEnding: "17h", attractionType: .atividadeLivre, description: "teste", place: "mapa", favorited: false, mapName: "Local Mapa 1")
 
 var attraction1: Attraction = Attraction (date: "15/04", name: "Animekê Livre e Quizz", timeBegin: "11:00", timeEnding: "12:00", attractionType: .atividadeLivre, description: "Gosta de cantar? Quer soltar a voz sem compromisso? O Animekê Livre é para você subir no palco e mostrar seu talento, não importa se é profissional ou não! Traz a tua música favorita e vem se divertir.", place: "Palco MPEG", favorited: false, mapName: "Palco MPEG")
@@ -159,3 +161,12 @@ var attraction8: Attraction = Attraction(date: "15/04", name: "Sessão de fotos 
 var attraction9: Attraction = Attraction(date: "15/04", name: "Sessão de fotos - Cantor: Ricardo Cruz", timeBegin: "16:00", timeEnding: "17:00", attractionType: .convidadoEspecial, description: "-", place: "Área VIP", favorited: false, mapName: "Área VIP")
 
 var attraction10: Attraction = Attraction(date: "15/04", name: "Encerramento", timeBegin: "18:30", timeEnding: "19:00", attractionType: .encerramento , description: "-", place: "Centro", favorited: false, mapName: "Centro")
+
+
+// DATA 16/04
+
+var attraction11: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")
+
+var attraction12: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: attractionType, description: "", place: "", favorited: false, mapName: "")
+
+var attraction13: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")

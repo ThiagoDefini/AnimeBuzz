@@ -26,8 +26,6 @@ struct StrokeText: View{
     }
 }
 
-
-
 struct SelectEventView: View{
     var events: [Event] = [Event(city: "Porto Alegre", dates: [], guests: [], attractions: [], map: "", imageName: Images().poa), Event(city: "Portão", dates: [], guests: [], attractions: [], map: "", imageName: Images().portao)]
     var body: some View {
@@ -36,13 +34,13 @@ struct SelectEventView: View{
                 VStack(spacing: 0){
                     Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
                     ZStack{
-                Colors().pink
-                    .edgesIgnoringSafeArea(.bottom)
-                    VStack{
-                        Images.Titulos().titulo_eventos
-                        Spacer()
-                    
-                }
+                        Colors().pink
+                            .edgesIgnoringSafeArea(.bottom)
+                        VStack{
+                            Images.Titulos().titulo_eventos
+                            Spacer()
+                            
+                        }
                         ScrollView{
                             StrokeText(text: "eventos", width: 2, color: .black)
                                 .foregroundColor(.white)
@@ -69,7 +67,7 @@ struct SelectEventView: View{
                         .resizable()
                         .padding(.top, 40.0)
                         .frame(width: 100.0, height: 100.0)
-    
+                    
                 }
                 ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing){
                     Button(action:{}, label:{

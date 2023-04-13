@@ -14,13 +14,13 @@ struct MapView: View {
             VStack(spacing: 0){
                 Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
                 ZStack{
-            Colors().pink
-                .edgesIgnoringSafeArea(.bottom)
-                VStack{
-                    Images.Titulos().titulo_mapa
-                    Spacer()
-                
-            }
+                    Colors().pink
+                        .edgesIgnoringSafeArea(.bottom)
+                    VStack{
+                        Images.Titulos().titulo_mapa
+                        Spacer()
+                        
+                    }
                     ScrollView{
                         StrokeText(text: "mapa", width: 2, color: .black)
                             .foregroundColor(.white)
@@ -39,9 +39,9 @@ struct MapView: View {
                                     .onTapGesture {
                                         selected.toggle()
                                     }
-                                    
+                                
                             }
-                        }
+                    }
                     .scrollIndicators(.hidden)
                 }
             }
@@ -55,7 +55,7 @@ struct MapView: View {
                     selected.toggle()
                 }
             Images().mapa .resizable() .frame(width: 360, height: 700) .cornerRadius(20.0)
-                            
+            
         }: nil)
     }
 }

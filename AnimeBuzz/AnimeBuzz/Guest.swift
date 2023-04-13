@@ -6,7 +6,6 @@
 //
 
 import Foundation
-//teste
 
 class Guest: Hashable {
     
@@ -129,4 +128,3 @@ var guest4: Guest = Guest(name: "Ricardo Cruz", category: "CANTOR", description:
 var guest5: Guest = Guest(name: "Moo-Chan", category: "COSPLAYER/DUBLADORA", description: "😍A otakinha mais fofa da internet vai vir pro Buzz 😍Moo-chan é dubladora, cantora, produtora de conteúdo de anime, mangá e cosplay desde 2013 e também cosplayer há 12 anos. Atualmente produz conteúdo para o canal BENTÔ, do Omelete, dublou personagens como Ayako Yamada em Kageki Shojo!! e Mine Kuramae, em Fruits basket. É conhecida também por ter apresentado o programa Bunka Pop na PlayTV e YouTube do seu inicio, em 2016, até 2020.A Moo vai estar no nosso Palco Principal no dia 15/04 (SÁBADO) pra participar de um super bate-papo, então já prepara as perguntas que ela vai responder tudinho!! Ela também vai participar da nossa área VIP, então é a sua chance de conhecê-la e tirar fotos exclusivas com ela!!!💙", instagram: "https://www.instagram.com/kidzastr/", facebook:"https://www.facebook.com/MooChanCosplay/", youtube:"https://www.youtube.com/c/omeleteve/videos", smallImage: "Moo-chan", bigImage: "Moo-chan Maior", listOfAttraction: [testeAtracoes])
 
 var guest6: Guest = Guest(name: "Luísa Horta", category: "DUBLADORA/ATRIZ", description: "A nossa fadinha dos eventos também tá confirmadíssima pro Buzz!!!Luísa Horta é Bacharel em Teatro pela Universidade Federal do Rio Grande do Sul. Faz parte do elenco da série infantil Mundo Curiozoo, da Discovery Kids. Na dublagem, fez personagens como Uraraka Ochako (My Hero Academia), Kohaku (Dr Stone), Skye (jogo Valorant) e Casca (Berserk). É otaku de coração e seguidora dos passos de Mugiwara no Luffy💙 A Luísa vai estar no nosso Palco Principal no dia 16/04 (DOMINGO) pra participar de um super bate-papo, então já prepara as perguntas que ela vai responder tudinho!!Ela também vai participar da nossa área VIP, então é a sua chance de conhecê-la e tirar fotos exclusivas com ela!!!💙", instagram: "", facebook:"https://www.facebook.com/lulihorta", youtube: nil, smallImage: "Luisa Horta", bigImage: "Luisa Horta Maior", listOfAttraction: [testeAtracoes])
-
