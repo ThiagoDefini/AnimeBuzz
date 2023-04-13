@@ -34,7 +34,7 @@ enum attractionType{
     }
     
     var color: Color{
-        switch self{
+        switch self {
         case .atividadeLivre:
             return Colors().magenta
         case .presencaEspecial:
@@ -47,6 +47,8 @@ enum attractionType{
         case .bandaJRock:
 //            return Colors().flamingo
             return Color.pink
+        case .encerramento:
+            return Colors().magenta
         }
     }
     
@@ -191,8 +193,8 @@ var attraction10: Attraction = Attraction(date: "15/04", name: "Encerramento", t
 
 // DATA 16/04
 
-var attraction11: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")
+var attraction11: Attraction = Attraction(date: "16/04", name: "Dublador: Charles Emmanuel + Luísa Horta", timeBegin: "15:00", timeEnding: "16:00", attractionType: .convidadoEspecial, description: "-", place: "Placo MPEG", favorited: false, mapName: "Placo MPEG")
 
-var attraction12: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: attractionType, description: "", place: "", favorited: false, mapName: "")
+var attraction12: Attraction = Attraction(date: "16/04", name: "Desfile Cosplay", timeBegin: "16:00", timeEnding: "17:00", attractionType: .concurso, description: "Aaaah o Concurso Cosplay do Buzz! É o tradicional desfile com 50 participantes vestindo incríveis cosplays disputando as 6 primeiras colocações no palco principal em frente a milhares de espectadores. Leia as regras, faça sua inscrição e prepare seu cosplay! O Concurso será realizado no DOMINGO!", place: "Palco MPEG", favorited: false, mapName: "Palco MPEG")
 
-var attraction13: Attraction = Attraction(date: "16/04", name: "", timeBegin: "", timeEnding: "", attractionType: <#T##attractionType#>, description: "", place: "", favorited: false, mapName: "")
+var attraction13: Attraction = Attraction(date: "16/04", name: " Cantor: Detonator", timeBegin: "17:30", timeEnding: "18:30", attractionType: .convidadoEspecial, description: "-", place: "Palco MPEG", favorited: false, mapName: "Palco MPEG")
