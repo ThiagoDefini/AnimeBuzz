@@ -32,7 +32,7 @@ struct tabViewScreen: View {
                         Text("Cronograma")
                     }
                 }
-            ContentView()
+            MapView()
                 .tabItem(){
                     VStack{
                         Icons().mapa
