@@ -16,11 +16,12 @@ struct GuestInfos: View {
         VStack{
             
             VStack{
+                //colocar NavigationLink AQUI (){
+
                 Image(guest.getSmallImage())
                     .resizable()
                     .scaledToFit()
                     .frame(width: 250)
-                
                 Text(guest.getName())
                     .padding(.vertical,1)
                     .font(.system(size: 24))
@@ -28,26 +29,37 @@ struct GuestInfos: View {
                     .font(.system(size: 16))
 
             }
+            .padding()
             .bold()
             .font(.system(size: 20))
             .italic()
             .foregroundColor(.white)
             
             HStack {
-                Image("facebook")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
-                Image("youtube")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
-                Image("instagram")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40)
+                
+                if guest.getInstagram() != nil {
+                    
+                    Image("instagram")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
+                
+                if guest.getFacebook() != nil {
+                    Image("facebook")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
+                
+                if guest.getYoutube() != nil {
+                    Image("youtube")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
             }
-            
+            .padding()
         }
         .background(Colors().purple)
     }
