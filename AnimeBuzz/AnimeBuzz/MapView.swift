@@ -41,10 +41,255 @@ struct MapView: View {
                                     }
                                 
                             }
+                        VStack{
+                            HStack{
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    Text("1")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- MPEG")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                Spacer()
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    
+                                    Text("7")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 7")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                .padding(.trailing, 15)
+                        }
+                            .padding(.trailing, 10)
+                            HStack{
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    Text("2")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Musical")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                Spacer()
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    
+                                    Text("8")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 8")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                .padding(.trailing, 15)
+                        }
+                            .padding(.trailing, 10)
+                            HStack{
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    Text("3")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Vip")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                Spacer()
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    
+                                    Text("9")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 9")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                .padding(.trailing, 15)
+                        }
+                            .padding(.trailing, 10)
+                            HStack{
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    Text("4")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 4")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                Spacer()
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    
+                                    Text("10")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 10")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                
+                        }
+                            .padding(.trailing, 10)
+                            HStack{
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    Text("5")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 5")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                Spacer()
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    
+                                    Text("11")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 11")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                        }
+                            .padding(.trailing, 10)
+                            HStack{
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    Text("6")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 6")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                                Spacer()
+                                HStack(spacing: -15){
+                                ZStack{
+                                    Circle()
+                                        .fill(Colors().blue)
+                                        .frame(width: 100, height: 50)
+                                        .overlay(
+                                            Circle()
+                                                .stroke(Color.black, lineWidth: borderWidth))
+                                    
+                                    Text("12")
+                                        .modifier(title3())
+                                        .padding(.bottom, 3)
+                                        .padding(.trailing, 3)
+                                }
+                                Text("- Area 12")
+                                    .modifier(title3())
+                                    .foregroundColor(Colors().principal)
+                            }
+                        }
+                            .padding(.trailing, 10)
+                        }
+                        .padding(.top, padding2)
+
+                            }
+
                     }
                     .scrollIndicators(.hidden)
                 }
             }
+            
         }
         .overlay(selected ?
                  ZStack{
