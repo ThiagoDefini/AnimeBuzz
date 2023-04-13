@@ -17,7 +17,7 @@ struct MapView: View {
             Colors().pink
                 .edgesIgnoringSafeArea(.bottom)
                 VStack{
-                    Titulos().titulo_mapa
+                    Images.Titulos().titulo_mapa
                     Spacer()
                 
             }

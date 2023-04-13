@@ -39,7 +39,7 @@ class Images{
         var titulo_mapa = Image("Titulo Mapa")
         var titulo_favoritos = Image("Titulo Favoritos")
     }
-        
+    
     class Convidados{
         class Pequeno{
             var charles_emmanuel = Image("Charles Emmanuel")
@@ -59,7 +59,7 @@ class Images{
             var moo_chan = Image("Moo-chan Maiors")
         }
     }
-
+}
 
 class Icons{
     var noticias = Image(systemName: "newspaper.fill")
