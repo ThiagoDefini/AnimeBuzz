@@ -20,6 +20,8 @@ class Colors{
     var magenta = Color("Magenta")
     var blue = Color("Ocean Blue")
     var principal = Color("AccentColor")
+    var gold = Color("Goldish")
+    var flamingo = Color("Flamingo")
 }
 
 class Images{
@@ -30,6 +32,17 @@ class Images{
     var poa = Image("Poa")
     var portao = Image("Portao")
     var mapa = Image("Mapa")
+    
+    class Atividades{
+        var animeke = Image("Animeke")
+        var apresentacao_kpop = Image("Animeke")
+        var apresentacao_cosplay = Image("Animeke")
+        var cospobre = Image("Cospobres")
+        var kirajustice = Image("KiraJustice")
+        var desfile = Image("Desfile")
+        var setfly = Image("Setfly")
+        var random_dance = Image("Random Dance")
+    }
     
     class Titulos{
         var titulo_eventos = Image("Titulo Eventos")
