@@ -33,6 +33,17 @@ class Images{
     var portao = Image("Portao")
     var mapa = Image("Mapa")
     
+    class Atividades{
+        var animeke = Image("Animeke")
+        var apresentacao_kpop = Image("Animeke")
+        var apresentacao_cosplay = Image("Animeke")
+        var cospobre = Image("Cospobres")
+        var kirajustice = Image("KiraJustice")
+        var desfile = Image("Desfile")
+        var setfly = Image("Setfly")
+        var random_dance = Image("Random Dance")
+    }
+    
     class Titulos{
         var titulo_eventos = Image("Titulo Eventos")
         var titulo_noticias_poa = Image("Titulo Noticias Poa")
