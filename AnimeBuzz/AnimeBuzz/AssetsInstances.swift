@@ -20,6 +20,8 @@ class Colors{
     var magenta = Color("Magenta")
     var blue = Color("Ocean Blue")
     var principal = Color("AccentColor")
+    var gold = Color("Goldish")
+    var flamingo = Color("Flamingo")
 }
 
 class Images{
