@@ -41,6 +41,9 @@ struct AttractionView: View {
                                 .foregroundColor(Colors().principal)
                                 .modifier(title3())
                         }
+                        .onTapGesture{
+                            attraction.setFavorited(favorited: true)
+                        }
                     }
                     .padding(.bottom, padding2)
                     ZStack{
