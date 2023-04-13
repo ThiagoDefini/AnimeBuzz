@@ -146,6 +146,16 @@ struct body: ViewModifier {
     }
 }
 
+//SHADOW FOR BUTTONS
+struct buttonShadow: ViewModifier {
+    var y = 4.0
+    var radius = 5.0
+    func body(content: Content) -> some View {
+        content
+            .shadow(color: Colors().black.opacity(0.25), radius: radius, x: 0, y: y)
+    }
+}
+
 //GENERAL SIZES
 struct iconSize: ViewModifier {
     func body(content: Content) -> some View {
