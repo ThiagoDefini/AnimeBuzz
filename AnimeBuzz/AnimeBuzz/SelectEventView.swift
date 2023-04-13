@@ -34,6 +34,7 @@ struct SelectEventView: View{
                 VStack(spacing: 0){
                     Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
                     ZStack{
+
                         Colors().pink
                             .edgesIgnoringSafeArea(.bottom)
                         VStack{
@@ -41,23 +42,38 @@ struct SelectEventView: View{
                             Spacer()
                             
                         }
+
+                Colors().pink
+                    .edgesIgnoringSafeArea(.bottom)
+                    VStack{
+                        
+                        Spacer()
+                    
+                }
+
                         ScrollView{
-                            StrokeText(text: "eventos", width: 2, color: .black)
-                                .foregroundColor(.white)
-                                .font(.system(size: 75, weight: .bold))
-                                .padding(.vertical)
+                            ZStack{
+                                Images.Titulos().titulo_eventos
+                                StrokeText(text: "eventos", width: 2, color: .black)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 75, weight: .bold))
+                                    .padding(.vertical)
+                            }
                             
                             ForEach(events, id: \.self){ event in
                                 NavigationLink{
-                                    TabBarNews()
+                                    tabViewScreen()
                                 }label: {
                                     event.getImageName()
                                 }
-                            }}
+                            }
+                            
+                        }
                         .scrollIndicators(.hidden)
                     }
                 }
             }
+            .navigationBarBackButtonHidden()
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Colors().black, for: .navigationBar)
             .toolbar(.visible, for: .navigationBar)
