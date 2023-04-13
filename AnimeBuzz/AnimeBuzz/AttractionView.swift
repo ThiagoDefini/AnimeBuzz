@@ -20,12 +20,13 @@ struct AttractionView: View {
                         Images().banner
                         Text(attraction.getName())
                             .foregroundColor(Colors().black)
-                            .font(.title)
+                            .modifier(title2())
                     }
                         .padding(.bottom, padding2)
                     Text(attraction.getDescription())
                         .foregroundColor(Colors().principal)
                         .padding(.bottom, padding2)
+                        .modifier(title3())
                     ZStack{
                         RoundedRectangle(cornerRadius: radius)
                             .fill(Colors().yellow)
@@ -37,8 +38,8 @@ struct AttractionView: View {
                             Icons().estrela
                                 .foregroundColor(Colors().principal)
                             Text("Favoritar")
-                                .font(.title2)
                                 .foregroundColor(Colors().principal)
+                                .modifier(title3())
                         }
                     }
                     .padding(.bottom, padding2)
@@ -50,12 +51,12 @@ struct AttractionView: View {
                                 RoundedRectangle(cornerRadius: radius)
                                     .stroke(Color.black, lineWidth: borderWidth))
                         Text("\(attraction.getDate()) - \(attraction.getTimeBegin()) até \(attraction.getTimeEnding())")
-                            .font(.title2)
                             .foregroundColor(Colors().principal)
+                            .modifier(title2())
                     }
                     .padding(.bottom, padding2)
                     Text("Local:")
-                        .font(.title2)
+                        .modifier(title3())
                         .foregroundColor(Colors().principal)
                         .padding(.trailing, 290)
                     Image(attraction.getMapName())
