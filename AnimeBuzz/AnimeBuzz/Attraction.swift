@@ -34,26 +34,59 @@ enum attractionType {
 }
 
 class Attraction{
-    private var time: String
+    private var date: String
+    private var name: String
+    private var timeBegin: String
+    private var timeEnding: String
     private var attractionType: attractionType
     private var description: String
     private var place: String
     private var favorited: Bool
+    private var mapName: String
     
-    init(time: String, attractionType: attractionType, description: String, place: String, favorited: Bool){
-        self.time = time
+    init(date: String, name: String, timeBegin: String, timeEnding: String, attractionType: attractionType, description: String, place: String, favorited: Bool, mapName: String){
+        self.date = date
+        self.name = name
+        self.timeBegin = timeBegin
+        self.timeEnding = timeEnding
         self.attractionType = attractionType
         self.description = description
         self.place = place
         self.favorited = favorited
+        self.mapName = mapName
+        //self.mapImage = mapImage
     }
     
-    func getTime() -> String{
-        return time
+    func getDate() -> String{
+        return date
     }
     
-    func setTime(time: String){
-        self.time = time
+    func setDate(date: String){
+        self.date = date
+    }
+    
+    func getName() -> String{
+        return name
+    }
+    
+    func setName(name: String){
+        self.name = name
+    }
+    
+    func getTimeBegin() -> String{
+        return timeBegin
+    }
+    
+    func setTimeBegin(time: String){
+        self.timeBegin = time
+    }
+    
+    func getTimeEnding() -> String{
+        return timeEnding
+    }
+    
+    func setTimeEnding(time: String){
+        self.timeEnding = time
     }
     
     func getAttractionType() -> attractionType{
@@ -92,6 +125,14 @@ class Attraction{
         favorited.toggle()
     }
     
+    func getMapName() -> String{
+        return mapName
+    }
+    
+    func setMapName(mapName: String){
+        self.mapName = mapName
+    }
+    
 }
 
-var testeAtracoes: Attraction = Attraction(time: "16h", attractionType: .atividadeLivre, description: "teste", place: "mapa", favorited: false)
+var testeAtracoes: Attraction = Attraction(date: "15/04", name: "Animeke", timeBegin: "16h", timeEnding: "17h", attractionType: .atividadeLivre, description: "teste", place: "mapa", favorited: false, mapName: "Local Mapa 1")
