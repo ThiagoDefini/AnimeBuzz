@@ -35,7 +35,7 @@ struct GuestAttractionRow: View {
                 .padding(5)
                 
             }
-            .foregroundColor(.black)
+            .foregroundColor(.white)
         }
         .cornerRadius(radius)
         .overlay(

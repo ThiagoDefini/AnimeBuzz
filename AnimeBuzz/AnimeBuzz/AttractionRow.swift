@@ -9,15 +9,15 @@ import SwiftUI
 
 struct AttractionRow: View {
     
-    var atracao: Attraction
-
+    var attraction: Attraction
+    
     var body: some View {
         
         VStack{
-
+            
             //DATA
             HStack{
-                Text (atracao.getDate())
+                Text (attraction.getDate())
                     .modifier(title2())
                     .frame(width: 120, height: 60, alignment: .center)
                     .background(Colors().blue)
@@ -34,29 +34,44 @@ struct AttractionRow: View {
             //INFOS DO EVENTO
             VStack{
                 HStack{
-                    Text (atracao.getName())
+                    Text (attraction.getName())
                         .modifier(title2())
-                        .padding(.leading, 10)
                         .foregroundColor(.white)
                     Spacer()
                 }
                 Spacer()
                 
                 HStack{
+                    Icons().relogio
+                        .foregroundColor(Colors().blue)
+                    Text(attraction.getTimeBegin() + " - " + attraction.getTimeEnding())
+                    Icons().atividade
+                        .foregroundColor(Colors().blue)
+                    Text(attraction.getAttractionType().description)
+                    Icons().local
+                        .foregroundColor(Colors().blue)
                     
-                    Text ("infos do evento")
-                        .padding(.leading, 10)
+                    Text(attraction.getPlace())
+                    Spacer()
+
+                }
+                HStack{
+                    Icons().estrela_riscada
                         .foregroundColor(.white)
                     Spacer()
+                        .padding()
+
                 }
             }
+            .padding()
+
+            .foregroundColor(.white)
             .frame(width: 360, height: 120, alignment: .center)
-            .background(Colors().purple)
+            .background(attraction.getAttractionType().color)
             .cornerRadius(radius)
             .overlay(
                 RoundedRectangle(cornerRadius: radius)
                     .stroke(Color.black, lineWidth: 2))
-            
         }
         .background(.green)
         .padding()
@@ -65,6 +80,6 @@ struct AttractionRow: View {
 
 struct AttractionRow_Previews: PreviewProvider {
     static var previews: some View {
-        AttractionRow(atracao: attraction1)
+        AttractionRow(attraction: attraction1)
     }
 }

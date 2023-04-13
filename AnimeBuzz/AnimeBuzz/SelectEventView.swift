@@ -34,7 +34,7 @@ struct SelectEventView: View{
                 VStack(spacing: 0){
                     Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
                     ZStack{
-<<<<<<< HEAD
+
                         Colors().pink
                             .edgesIgnoringSafeArea(.bottom)
                         VStack{
@@ -42,7 +42,7 @@ struct SelectEventView: View{
                             Spacer()
                             
                         }
-=======
+
                 Colors().pink
                     .edgesIgnoringSafeArea(.bottom)
                     VStack{
@@ -50,7 +50,7 @@ struct SelectEventView: View{
                         Spacer()
                     
                 }
->>>>>>> ce9b93eda6be7a67dec5f51c3f77c2722f6985a4
+
                         ScrollView{
                             ZStack{
                                 Images.Titulos().titulo_eventos
