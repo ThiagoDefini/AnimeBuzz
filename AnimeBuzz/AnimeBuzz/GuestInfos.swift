@@ -39,11 +39,15 @@ struct GuestInfos: View {
             HStack {
                 
                 if guest.getInstagram() != nil {
+                    NavigationLink{
+                        GuestView(guest: guest)
+                    }label: {
+                        Image("instagram")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40)
+                    }
                     
-                    Image("instagram")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40)
                 }
                 
                 if guest.getFacebook() != nil {

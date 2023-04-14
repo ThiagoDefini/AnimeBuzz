@@ -9,26 +9,26 @@ import SwiftUI
 
 struct AttractionRow: View {
     
-    var attraction: Attraction
+    @State var attraction: Attraction
     
     var body: some View {
         
         VStack{
             
             //DATA
-            HStack{
-                Text (attraction.getDate())
-                    .modifier(title2())
-                    .frame(width: 120, height: 60, alignment: .center)
-                    .background(Colors().circleBlue)
-                    .cornerRadius(radius)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: radius)
-                            .stroke(Color.black, lineWidth: 2)
-                    )
-                    .foregroundColor(.white)
-                Spacer()
-            }
+//            HStack{
+//                Text (attraction.getDate())
+//                    .modifier(title2())
+//                    .frame(width: 120, height: 60, alignment: .center)
+//                    .background(Colors().circleBlue)
+//                    .cornerRadius(radius)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: radius)
+//                            .stroke(Color.black, lineWidth: 2)
+//                    )
+//                    .foregroundColor(.white)
+//                Spacer()
+//            }
             
             
             //INFOS DO EVENTO
@@ -56,11 +56,17 @@ struct AttractionRow: View {
 
                 }
                 HStack{
-                    Icons().estrela_riscada
-                        .foregroundColor(.white)
-                    Spacer()
-                        .padding()
-
+                    if attraction.getFavorited(){
+                        Icons().estrela
+                            .foregroundColor(.yellow)
+                        Spacer()
+                            .padding()
+                    } else{
+                        Icons().estrela_riscada
+                            .foregroundColor(.red)
+                        Spacer()
+                            .padding()
+                    }
                 }
             }
             .padding()
@@ -73,7 +79,7 @@ struct AttractionRow: View {
                 RoundedRectangle(cornerRadius: radius)
                     .stroke(Color.black, lineWidth: 2))
         }
-        .background(.green)
+//        .background(.green)
         .padding()
     }
 }

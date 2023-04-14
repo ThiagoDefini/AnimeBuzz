@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TabBarFavorites: View {
+    
+    var event: Event
+    
     var body: some View {
         NavigationStack {
             
@@ -29,6 +32,34 @@ struct TabBarFavorites: View {
                                         .font(.system(size: 64, weight: .bold))
                                 }
                                 .padding(.bottom, padding1)
+                                
+                                ForEach(event.getDates(), id: \.self){date in
+                                    HStack{
+                                        Text (date)
+                                            .modifier(title2())
+                                            .frame(width: 120, height: 60, alignment: .center)
+                                            .background(Colors().circleBlue)
+                                            .cornerRadius(radius)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: radius)
+                                                    .stroke(Color.black, lineWidth: 2)
+                                            )
+                                            .foregroundColor(.white)
+                                            .padding(.leading, 65)
+                                        Spacer()
+                                    }
+                                    ForEach(event.getAttractions(), id: \.self){ attraction in
+                                        if attraction.getDate() == date && attraction.getFavorited(){
+                                            NavigationLink{
+                                                AttractionView(attraction: attraction)
+                                            }label: {
+                                                AttractionRow(attraction: attraction)
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                
                             }
                         }
                     }
@@ -40,6 +71,6 @@ struct TabBarFavorites: View {
 
 struct TabBarFavorites_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarFavorites()
+        TabBarFavorites(event: event1)
     }
 }

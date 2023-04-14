@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct TabBarSchedule: View {
+    
+    @State var event: Event
+    
     var body: some View {
-        
-//        var arrayAttractions: [Attraction] = [attraction1, attraction2, attraction3, attraction4, attraction5, attraction6, attraction7, attraction8, attraction9, attraction10]
-//
         
         NavigationStack {
             
@@ -33,6 +33,34 @@ struct TabBarSchedule: View {
                                         .font(.system(size: 64, weight: .bold))
                                 }
                                 .padding(.bottom, padding1)
+                                
+                                ForEach(event.getDates(), id: \.self){date in
+                                    HStack{
+                                        Text (date)
+                                            .modifier(title2())
+                                            .frame(width: 120, height: 60, alignment: .center)
+                                            .background(Colors().circleBlue)
+                                            .cornerRadius(radius)
+                                            .overlay(
+                                                RoundedRectangle(cornerRadius: radius)
+                                                    .stroke(Color.black, lineWidth: 2)
+                                            )
+                                            .foregroundColor(.white)
+                                            .padding(.leading, 65)
+                                        Spacer()
+                                    }
+                                    ForEach(event.getAttractions(), id: \.self){ attraction in
+                                        if attraction.getDate() == date{
+                                            NavigationLink{
+                                                AttractionView(attraction: attraction)
+                                            }label: {
+                                                AttractionRow(attraction: attraction)
+                                            }
+                                        }
+                                    }
+                                }
+                                
+                                
                             }
                         }
                     }
@@ -44,6 +72,6 @@ struct TabBarSchedule: View {
 
 struct TabBarSchedule_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarSchedule()
+        TabBarSchedule(event: event1)
     }
 }
