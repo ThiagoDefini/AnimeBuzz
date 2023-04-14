@@ -51,9 +51,10 @@ struct TabViewScreen: View {
             }
             .accentColor(.white)
             .onAppear(){
+                UITabBar.appearance().barTintColor = UIColor(Colors().black)
                 UITabBar.appearance().backgroundColor = UIColor(Colors().black)
+                UITabBar.appearance().tintColor = UIColor(Colors().black)
                 UITabBar.appearance().unselectedItemTintColor = UIColor.white
-                
             }
         }
     }
