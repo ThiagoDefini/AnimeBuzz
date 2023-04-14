@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct tabViewScreen: View {
+struct TabViewScreen: View {
     
     var event: Event
     
     var body: some View {
+        
+        
         TabView{
-            //adicionar o nome certo das views quando prontas
+            
             TabBarNews(event: event)
                 .tabItem(){
                     VStack{
@@ -21,21 +23,22 @@ struct tabViewScreen: View {
                         Text("Noticias")
                     }
                 }
-            ContentView()
+            TabBarFavorites()
                 .tabItem(){
                     VStack{
                         Icons().estrela
                         Text("Favoritos")
                     }
                 }
-            ContentView()
+            TabBarSchedule()
                 .tabItem(){
                     VStack{
                         Icons().calendario
                         Text("Cronograma")
                     }
+                    .background(.pink)
                 }
-            MapView()
+            TapMapView()
                 .tabItem(){
                     VStack{
                         Icons().mapa
@@ -43,17 +46,16 @@ struct tabViewScreen: View {
                     }
                 }
         }
-        .accentColor(.green)
+        .accentColor(Colors().green)
         .onAppear(){
-            UITabBar.appearance().backgroundColor = UIColor.black
+            UITabBar.appearance().backgroundColor = UIColor(Colors().black)
             UITabBar.appearance().unselectedItemTintColor = UIColor.white
-            
         }
     }
 }
 
-struct tabViewScreen_Previews: PreviewProvider {
+struct TabViewScreen_Previews: PreviewProvider {
     static var previews: some View {
-        tabViewScreen(event: event1)
+        TabViewScreen(event: event1)
     }
 }

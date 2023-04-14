@@ -48,7 +48,7 @@ struct AttractionView: View {
                     .padding(.bottom, padding2)
                     ZStack{
                         RoundedRectangle(cornerRadius: radius)
-                            .fill(Colors().blue)
+                            .fill(Colors().circleBlue)
                             .frame(width: 350, height: 70)
                             .overlay(
                                 RoundedRectangle(cornerRadius: radius)

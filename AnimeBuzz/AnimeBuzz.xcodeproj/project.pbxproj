@@ -12,6 +12,8 @@
 		4C2843F929E8828F003F287C /* AttractionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2843F829E8828F003F287C /* AttractionRow.swift */; };
 		4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024A29E5DF940001748E /* TabBarNews.swift */; };
 		4C86024D29E5E7C70001748E /* SiteExterno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C86024C29E5E7C70001748E /* SiteExterno.swift */; };
+		4CA6D3DB29E8D154007D0E90 /* TabBarFavorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6D3DA29E8D154007D0E90 /* TabBarFavorites.swift */; };
+		4CA6D3DD29E8E702007D0E90 /* MapListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA6D3DC29E8E702007D0E90 /* MapListItemView.swift */; };
 		4CA98ECF29E5C70C00CFF9B1 /* Guest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */; };
 		4CA98ED129E5DA0D00CFF9B1 /* Attraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CA98ED029E5DA0D00CFF9B1 /* Attraction.swift */; };
 		7B94C6B129E5E20A005B549B /* SelectEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B94C6B029E5E20A005B549B /* SelectEventView.swift */; };
@@ -22,9 +24,9 @@
 		7BD9537529E892CC0009C517 /* GuestAttractionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9537429E892CC0009C517 /* GuestAttractionRow.swift */; };
 		7BD9537729E893620009C517 /* GuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD9537629E893620009C517 /* GuestView.swift */; };
 		7BEA5D7629E5C45600E36E1B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BEA5D7529E5C45600E36E1B /* Event.swift */; };
-		7C02246A29E7411600E6536C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C02246929E7411600E6536C /* MapView.swift */; };
+		7C02246A29E7411600E6536C /* TapMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C02246929E7411600E6536C /* TapMapView.swift */; };
 		7C57437629E86EB800A7E796 /* AttractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C57437529E86EB800A7E796 /* AttractionView.swift */; };
-		7C6F830129E5F5D9000E191D /* tabViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6F830029E5F5D9000E191D /* tabViewScreen.swift */; };
+		7C6F830129E5F5D9000E191D /* TabViewScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6F830029E5F5D9000E191D /* TabViewScreen.swift */; };
 		9202CA3029E5C0860076D157 /* AssetsInstances.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9202CA2F29E5C0860076D157 /* AssetsInstances.swift */; };
 		927063E129E712340038E8FD /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 927063D729E712340038E8FD /* Lato-BoldItalic.ttf */; };
 		927063E229E712340038E8FD /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 927063D829E712340038E8FD /* Lato-Italic.ttf */; };
@@ -47,6 +49,8 @@
 		4C2843F829E8828F003F287C /* AttractionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionRow.swift; sourceTree = "<group>"; };
 		4C86024A29E5DF940001748E /* TabBarNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarNews.swift; sourceTree = "<group>"; };
 		4C86024C29E5E7C70001748E /* SiteExterno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteExterno.swift; sourceTree = "<group>"; };
+		4CA6D3DA29E8D154007D0E90 /* TabBarFavorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarFavorites.swift; sourceTree = "<group>"; };
+		4CA6D3DC29E8E702007D0E90 /* MapListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListItemView.swift; sourceTree = "<group>"; };
 		4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
 		4CA98ED029E5DA0D00CFF9B1 /* Attraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attraction.swift; sourceTree = "<group>"; };
 		7B94C6B029E5E20A005B549B /* SelectEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectEventView.swift; sourceTree = "<group>"; };
@@ -58,9 +62,9 @@
 		7BD9537429E892CC0009C517 /* GuestAttractionRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestAttractionRow.swift; sourceTree = "<group>"; };
 		7BD9537629E893620009C517 /* GuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GuestView.swift; sourceTree = "<group>"; };
 		7BEA5D7529E5C45600E36E1B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		7C02246929E7411600E6536C /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		7C02246929E7411600E6536C /* TapMapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapMapView.swift; sourceTree = "<group>"; };
 		7C57437529E86EB800A7E796 /* AttractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttractionView.swift; sourceTree = "<group>"; };
-		7C6F830029E5F5D9000E191D /* tabViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tabViewScreen.swift; sourceTree = "<group>"; };
+		7C6F830029E5F5D9000E191D /* TabViewScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewScreen.swift; sourceTree = "<group>"; };
 		9202CA2F29E5C0860076D157 /* AssetsInstances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsInstances.swift; sourceTree = "<group>"; };
 		927063D729E712340038E8FD /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		927063D829E712340038E8FD /* Lato-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Italic.ttf"; sourceTree = "<group>"; };
@@ -112,25 +116,27 @@
 				927063D629E712240038E8FD /* Fonts */,
 				92A88BAC29E4A200004495AB /* Onboarding */,
 				7BBBCDAA29E49E52006DD381 /* AnimeBuzzApp.swift */,
+				7BBBCDAC29E49E52006DD381 /* ContentView.swift */,
+				7B94C6B029E5E20A005B549B /* SelectEventView.swift */,
+				7C6F830029E5F5D9000E191D /* TabViewScreen.swift */,
+				4C86024A29E5DF940001748E /* TabBarNews.swift */,
+				4CA6D3DA29E8D154007D0E90 /* TabBarFavorites.swift */,
+				4C2843F529E87B83003F287C /* TabBarSchedule.swift */,
+				7C02246929E7411600E6536C /* TapMapView.swift */,
+				4CA6D3DC29E8E702007D0E90 /* MapListItemView.swift */,
 				4CA98ED029E5DA0D00CFF9B1 /* Attraction.swift */,
 				4CA98ECE29E5C70C00CFF9B1 /* Guest.swift */,
 				7BEA5D7529E5C45600E36E1B /* Event.swift */,
-				7B94C6B029E5E20A005B549B /* SelectEventView.swift */,
-				7C6F830029E5F5D9000E191D /* tabViewScreen.swift */,
+				4C2843F829E8828F003F287C /* AttractionRow.swift */,
 				7BD9537429E892CC0009C517 /* GuestAttractionRow.swift */,
 				7BD9537629E893620009C517 /* GuestView.swift */,
-				7BBBCDAC29E49E52006DD381 /* ContentView.swift */,
 				7C57437529E86EB800A7E796 /* AttractionView.swift */,
-				7C02246929E7411600E6536C /* MapView.swift */,
-				4C86024A29E5DF940001748E /* TabBarNews.swift */,
-				4C2843F529E87B83003F287C /* TabBarSchedule.swift */,
-				4C2843F829E8828F003F287C /* AttractionRow.swift */,
 				4C15B97229E7321900E4D865 /* GuestInfos.swift */,
 				4C86024C29E5E7C70001748E /* SiteExterno.swift */,
 				7BBBCDAE29E49E52006DD381 /* Assets.xcassets */,
-				7BBBCDB029E49E52006DD381 /* Preview Content */,
 				9202CA2F29E5C0860076D157 /* AssetsInstances.swift */,
 				928AF8D729E5E8A900D0D404 /* TesteView.swift */,
+				7BBBCDB029E49E52006DD381 /* Preview Content */,
 			);
 			path = AnimeBuzz;
 			sourceTree = "<group>";
@@ -250,19 +256,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				9202CA3029E5C0860076D157 /* AssetsInstances.swift in Sources */,
-				7C6F830129E5F5D9000E191D /* tabViewScreen.swift in Sources */,
+				7C6F830129E5F5D9000E191D /* TabViewScreen.swift in Sources */,
 				4C2843F929E8828F003F287C /* AttractionRow.swift in Sources */,
+				4CA6D3DD29E8E702007D0E90 /* MapListItemView.swift in Sources */,
 				92A88BAE29E4A21B004495AB /* OnboardingData.swift in Sources */,
 				7C57437629E86EB800A7E796 /* AttractionView.swift in Sources */,
 				92A88BB229E4A253004495AB /* OnboardingView.swift in Sources */,
 				7BBBCDAD29E49E52006DD381 /* ContentView.swift in Sources */,
+				4CA6D3DB29E8D154007D0E90 /* TabBarFavorites.swift in Sources */,
 				7BD9537529E892CC0009C517 /* GuestAttractionRow.swift in Sources */,
 				4C86024B29E5DF940001748E /* TabBarNews.swift in Sources */,
 				4C15B97329E7321900E4D865 /* GuestInfos.swift in Sources */,
 				7BD9537729E893620009C517 /* GuestView.swift in Sources */,
 				4CA98ED129E5DA0D00CFF9B1 /* Attraction.swift in Sources */,
 				4C2843F629E87B83003F287C /* TabBarSchedule.swift in Sources */,
-				7C02246A29E7411600E6536C /* MapView.swift in Sources */,
+				7C02246A29E7411600E6536C /* TapMapView.swift in Sources */,
 				7BEA5D7629E5C45600E36E1B /* Event.swift in Sources */,
 				7BBBCDAB29E49E52006DD381 /* AnimeBuzzApp.swift in Sources */,
 				4CA98ECF29E5C70C00CFF9B1 /* Guest.swift in Sources */,

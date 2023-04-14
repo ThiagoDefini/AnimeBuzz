@@ -22,6 +22,10 @@ class Colors{
     var principal = Color("AccentColor")
     var gold = Color("Goldish")
     var flamingo = Color("Flamingo")
+    var diamond = Color("Diamond")
+    var littleGreen = Color(red: 0.702, green: 0.843, blue: 0.545)
+    var circleBlue = Color(red: 0.097, green: 0.645, blue: 0.859)
+
 }
 
 class Images{

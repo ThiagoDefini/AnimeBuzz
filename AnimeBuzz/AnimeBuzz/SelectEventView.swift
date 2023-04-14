@@ -62,7 +62,7 @@ struct SelectEventView: View{
                             
                             ForEach(events, id: \.self){ event in
                                 NavigationLink{
-                                    tabViewScreen(event: event)
+                                    TabViewScreen(event: event)
                                 }label: {
                                     event.getImageName()
                                 }

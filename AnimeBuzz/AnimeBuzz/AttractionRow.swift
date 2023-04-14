@@ -20,7 +20,7 @@ struct AttractionRow: View {
                 Text (attraction.getDate())
                     .modifier(title2())
                     .frame(width: 120, height: 60, alignment: .center)
-                    .background(Colors().blue)
+                    .background(Colors().circleBlue)
                     .cornerRadius(radius)
                     .overlay(
                         RoundedRectangle(cornerRadius: radius)
@@ -43,13 +43,13 @@ struct AttractionRow: View {
                 
                 HStack{
                     Icons().relogio
-                        .foregroundColor(Colors().blue)
+                        .foregroundColor(Colors().circleBlue)
                     Text(attraction.getTimeBegin() + " - " + attraction.getTimeEnding())
                     Icons().atividade
-                        .foregroundColor(Colors().blue)
+                        .foregroundColor(Colors().circleBlue)
                     Text(attraction.getAttractionType().description)
                     Icons().local
-                        .foregroundColor(Colors().blue)
+                        .foregroundColor(Colors().circleBlue)
                     
                     Text(attraction.getPlace())
                     Spacer()
