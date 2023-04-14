@@ -67,6 +67,7 @@ struct TabBarNews: View {
                                         }
                                         .buttonStyle(TicketButton())
                                         .padding(.bottom, padding2)
+                                        
                                         VStack{
                                             VStack{
                                                 HStack{

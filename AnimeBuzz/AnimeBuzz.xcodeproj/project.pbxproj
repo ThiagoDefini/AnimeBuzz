@@ -135,11 +135,11 @@
 				7C57437529E86EB800A7E796 /* AttractionView.swift */,
 				4C15B97229E7321900E4D865 /* GuestInfos.swift */,
 				4C86024C29E5E7C70001748E /* SiteExterno.swift */,
+				4CA6D3DE29E8EFB6007D0E90 /* NavigationBar.swift */,
 				7BBBCDAE29E49E52006DD381 /* Assets.xcassets */,
 				9202CA2F29E5C0860076D157 /* AssetsInstances.swift */,
 				928AF8D729E5E8A900D0D404 /* TesteView.swift */,
 				7BBBCDB029E49E52006DD381 /* Preview Content */,
-				4CA6D3DE29E8EFB6007D0E90 /* NavigationBar.swift */,
 			);
 			path = AnimeBuzz;
 			sourceTree = "<group>";

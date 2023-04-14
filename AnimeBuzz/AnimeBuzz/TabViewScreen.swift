@@ -56,7 +56,6 @@ struct TabViewScreen: View {
                 
             }
         }
-        
     }
 }
 
