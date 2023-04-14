@@ -18,9 +18,7 @@ struct TicketButton: ButtonStyle {
                     .font(.system(size: 60))
                     .rotationEffect(.degrees(-30))
             }
-            
             Spacer()
-            
             VStack{
                 Text("GARANTA")
                 Text("SEU INGRESSO")
@@ -29,7 +27,7 @@ struct TicketButton: ButtonStyle {
             .italic()
             .modifier(title3())
             Spacer()
-            
+
         }
         .frame(width: 350, height: 80, alignment: .center)
         .background(Colors().yellow)
@@ -51,71 +49,66 @@ struct TabBarNews: View {
                 ZStack{
                     Colors().pink
                         .ignoresSafeArea()
-                    VStack{
-                        Images.Titulos().titulo_noticias_poa
-                            .ignoresSafeArea()
-                        Spacer()
-                    }
                     
                     VStack{
                         ScrollView{
-                            HStack{
-                                StrokeText(text: event.getCity(), width: 2, color: .black)
-                                    .foregroundColor(.white)
-                                    .font(.system(size: 64, weight: .bold))
-                            }
-                            .padding(.bottom, padding1)
-                            
-                            NavigationLink("") {
-                                SiteExterno()
-                            }
-                            .buttonStyle(TicketButton())
-                            .padding(.bottom, padding2)
-                            .padding(.top, -10)
-                            
                             VStack{
-                                VStack{
+                                ZStack(alignment: .top){
+                                    Images.Titulos().titulo_noticias_poa
                                     
-                                    HStack{
-                                        Text ("Convidados")
+                                    VStack{
+                                        StrokeText(text: event.getCity(), width: 2, color: .black)
                                             .foregroundColor(.white)
+                                            .font(.system(size: 64, weight: .bold))
+                                            .padding(.bottom, padding1)
                                         
-                                        Text ("mais")
-                                            .foregroundColor(Colors().yellow)
-                                        
+                                        NavigationLink("") {
+                                            SiteExterno()
+                                        }
+                                        .buttonStyle(TicketButton())
+                                        .padding(.bottom, padding2)
+                                        VStack{
+                                            VStack{
+                                                HStack{
+                                                    Text ("Convidados")
+                                                        .foregroundColor(.white)
+                                                    
+                                                    Text ("mais")
+                                                        .foregroundColor(Colors().yellow)
+                                                    
+                                                }
+                                                .modifier(title2())
+                                                
+                                                Text ("do que especiais")
+                                                    .foregroundColor(Colors().yellow)
+                                                    .modifier(title2())
+                                            }
+                                            .bold()
+                                            .font(.system(size: 36))
+                                            .italic()
+                                            .padding(.top, 20)
+                                            
+                                            VStack{
+                                                ForEach(event.getGuests(), id: \.self) {guest in
+                                                    GuestInfos(guest: guest)
+                                                }
+                                            }
+                                            Spacer()
+                                        }
+                                        .frame(width: 350, alignment: .center)
+                                        .background(Colors().purple)
+                                        .cornerRadius(20)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .stroke(Color.black, lineWidth: 2)
+                                        )
                                     }
-                                    .modifier(title2())
-                                    
-                                    Text ("do que especiais")
-                                        .foregroundColor(Colors().yellow)
-                                        .modifier(title2())
                                 }
-                                .bold()
-                                .font(.system(size: 36))
-                                .italic()
-                                .padding(.top, 20)
-                                
-                                VStack{
-                                    ForEach(event.getGuests(), id: \.self) {guest in
-                                        GuestInfos(guest: guest)
-                                    }
-                                }
-                                
-                                Spacer()
                             }
-                            .frame(width: 350, alignment: .center)
-                            .background(Colors().purple)
-                            .cornerRadius(20)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 20)
-                                    .stroke(Color.black, lineWidth: 2)
-                            )
-                            
                         }
                     }
                 }
             }
-            
         }
     }
     struct StrokeText: View {
