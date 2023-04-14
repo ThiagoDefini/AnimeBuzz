@@ -55,6 +55,8 @@ struct SelectEventView: View{
                 }
             }
         }
+        .preferredColorScheme(.dark)
+//        .navigationBarBackButtonHidden()
     }
 }
 

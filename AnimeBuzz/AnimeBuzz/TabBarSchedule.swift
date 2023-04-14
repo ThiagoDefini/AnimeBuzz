@@ -39,7 +39,7 @@ struct TabBarSchedule: View {
                                         Text (date)
                                             .modifier(title2())
                                             .frame(width: 120, height: 60, alignment: .center)
-                                            .background(Colors().circleBlue)
+                                            .background(Colors().blue)
                                             .cornerRadius(radius)
                                             .overlay(
                                                 RoundedRectangle(cornerRadius: radius)

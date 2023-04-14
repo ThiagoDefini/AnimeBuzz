@@ -39,6 +39,7 @@ import SwiftUI
                                         .cornerRadius(20.0)
                                         .overlay{
                                             Icons().expandir
+//                                                .background(RoundedRectangle(cornerRadius: smallRadius))
                                                 .padding(.bottom, 507)
                                                 .padding(.leading, 260)
                                                 .foregroundColor(.black)
@@ -46,6 +47,7 @@ import SwiftUI
                                                 .onTapGesture {
                                                     selected.toggle()
                                                 }
+                                                
                                         }
                                 }
                                 
@@ -54,11 +56,11 @@ import SwiftUI
                                     HStack {
                                         VStack (alignment: .leading){
                                             MapListItemView(number: "1", place: "- Palco MPEG")
-                                            MapListItemView(number: "2", place: "- Musical")
-                                            MapListItemView(number: "3", place: "- Vip")
+                                            MapListItemView(number: "2", place: "- Área 2")
+                                            MapListItemView(number: "3", place: "- Musical")
                                             MapListItemView(number: "4", place: "- Área 4")
                                             MapListItemView(number: "5", place: "- Área 5")
-                                            MapListItemView(number: "6", place: "- Área 6")
+                                            MapListItemView(number: "6", place: "- Vip")
                                         }
                                         VStack(alignment: .leading){
                                             MapListItemView(number: "7", place: "- Área 7")

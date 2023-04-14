@@ -25,6 +25,7 @@ struct TicketButton: ButtonStyle {
             }
             .bold()
             .italic()
+            .foregroundColor(.black)
             .modifier(title3())
             Spacer()
 

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    
+    
+    
     var body: some View {
         
         HStack{
@@ -52,6 +55,7 @@ struct NavigationBar: View {
             .accentColor(.white)
         }
     }
+    
 }
 
 struct NavigationBar_Previews: PreviewProvider {

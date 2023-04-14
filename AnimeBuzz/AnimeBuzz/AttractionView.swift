@@ -13,6 +13,7 @@ import SwiftUI
 struct AttractionView: View {
     
     @State var attraction: Attraction
+    @State var favTemp: Bool = false
     
     var body: some View {
         ZStack{
@@ -38,22 +39,42 @@ struct AttractionView: View {
                     .padding(.bottom, padding2)
                     .multilineTextAlignment(.center)
                     
-                    ZStack{
-                        RoundedRectangle(cornerRadius: radius)
-                            .fill(Colors().yellow)
-                            .frame(width: 200, height: 50)
-                            .overlay(
+                    Button{
+
+                        favTemp.toggle()
+                        
+                    }label: {
+                        ZStack{
+                            if favTemp{
                                 RoundedRectangle(cornerRadius: radius)
-                                    .stroke(Color.black, lineWidth: borderWidth))
-                        HStack{
-                            Icons().estrela
-                                .foregroundColor(Colors().principal)
-                            Text("Favoritar")
-                                .foregroundColor(Colors().principal)
-                                .modifier(title3())
-                        }
-                        .onTapGesture{
-                            attraction.setFavorited(favorited: true)
+                                    .fill(Colors().red)
+                                    .frame(width: 200, height: 50)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: radius)
+                                            .stroke(Color.black, lineWidth: borderWidth))
+                                HStack{
+                                    Icons().estrela_riscada
+                                        .foregroundColor(Colors().principal)
+                                    Text("Remover")
+                                        .foregroundColor(Colors().principal)
+                                        .modifier(title3())
+                                }
+                                
+                            } else {
+                                RoundedRectangle(cornerRadius: radius)
+                                    .fill(Colors().yellow)
+                                    .frame(width: 200, height: 50)
+                                    .overlay(
+                                        RoundedRectangle(cornerRadius: radius)
+                                            .stroke(Color.black, lineWidth: borderWidth))
+                                HStack{
+                                    Icons().estrela
+                                        .foregroundColor(Colors().principal)
+                                    Text("Favoritar")
+                                        .foregroundColor(Colors().principal)
+                                        .modifier(title3())
+                                }
+                            }
                         }
                     }
                     .padding(.bottom, padding2)
@@ -78,12 +99,6 @@ struct AttractionView: View {
                         Spacer()
                     }
                     .padding(.leading)
-                    
-                    HStack{
-                        MapListItemView(number: attraction.getNumber(), place: attraction.getPlace())
-                    }
-//                    .background(.green)
-                    .padding(.horizontal)
                     
                     ZStack{
                         attraction.getMapName()

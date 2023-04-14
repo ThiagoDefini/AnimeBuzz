@@ -83,7 +83,11 @@ struct GuestView: View {
                             .padding(.vertical)
                             
                             ForEach(guest.getListOfattraction(), id: \.self){ attraction in
-                                GuestAttractionRow(attraction: attraction)
+                                NavigationLink{
+                                    AttractionView(attraction: attraction)
+                                }label: {
+                                    GuestAttractionRow(attraction: attraction)
+                                }
                             }
                             .padding(.horizontal)
                             .padding(.vertical)

@@ -25,6 +25,7 @@ struct MapListItemView: View {
                 Text(number)
                     .font(.custom(Fonts.Lato().bold, size: 22))
                     .padding(.bottom, 3)
+                    .foregroundColor(.black)
                     .padding(.trailing, 3)
             }
             Text(place)

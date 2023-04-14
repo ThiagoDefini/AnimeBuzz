@@ -40,7 +40,7 @@ struct GuestInfos: View {
                 
                 if guest.getInstagram() != nil {
                     NavigationLink{
-                        GuestView(guest: guest)
+                        ExternalWebsite()
                     }label: {
                         Image("instagram")
                             .resizable()
@@ -51,17 +51,25 @@ struct GuestInfos: View {
                 }
                 
                 if guest.getFacebook() != nil {
-                    Image("facebook")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40)
+                    NavigationLink{
+                        ExternalWebsite()
+                    }label: {
+                        Image("facebook")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40)
+                    }
                 }
                 
                 if guest.getYoutube() != nil {
-                    Image("youtube")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40)
+                    NavigationLink{
+                        ExternalWebsite()
+                    }label: {
+                        Image("youtube")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40)
+                    }
                 }
             }
             .padding()
