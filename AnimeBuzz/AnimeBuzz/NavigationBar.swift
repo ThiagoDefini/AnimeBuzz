@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct NavigationBar: View {
+    
+    var space: CGFloat
+    
     var body: some View {
         
         HStack{
@@ -16,29 +19,37 @@ struct NavigationBar: View {
                     Text("")
                         .foregroundColor(.pink)
                 }
-                .frame(maxWidth: .infinity)
-                VStack{
-                    Images().logo
-                        .resizable()
-                        .padding(.top, 20)
-                        .padding(.bottom, 20)
-                        .frame(width: 100.0, height: 100.0)
-                }
-                .frame(maxWidth: .infinity)
-                VStack{
-                    HStack{
-                        Image(systemName: "info.circle")
+//                .frame(maxWidth: .infinity)
+                HStack(alignment: .center){
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    Spacer()
+                    VStack{
+                        Images().logo
                             .resizable()
-                            .frame(width: 25, height: 25)
-                            .padding(.trailing, 10)
-                        Image(systemName: "at")
-                            .resizable()
-                            .frame(width: 25, height: 25)
+                            .padding(.vertical, 20)
+                            .padding(.trailing, 15)
+                            .frame(width: 100.0, height: 100.0)
                     }
-                    .foregroundColor(.white)
-                    .padding(.bottom, 20)
-                }
-                .frame(maxWidth: .infinity)
+//                    .frame(maxWidth: .infinity)
+                    Spacer()
+                    VStack{
+                        HStack(spacing: 20){
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                            Image(systemName: "at")
+                                .resizable()
+                                .frame(width: 25, height: 25)
+                        }
+                        .foregroundColor(.white)
+                        .padding(.bottom, -30)
+                    }
+//                    .frame(maxWidth: .infinity)
+                    Spacer()
+                }.padding(.top, space)
             }
             .background(Colors().black)
             .accentColor(.white)
@@ -49,7 +60,7 @@ struct NavigationBar: View {
 struct NavigationBar_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            NavigationBar()
+            NavigationBar(space: 0.0)
             Spacer()
         }
     }

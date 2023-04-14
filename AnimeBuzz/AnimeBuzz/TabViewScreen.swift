@@ -15,7 +15,7 @@ struct TabViewScreen: View {
         
         VStack{
             
-            NavigationBar()
+            NavigationBar(space: -40.0)
             
             TabView{
                 

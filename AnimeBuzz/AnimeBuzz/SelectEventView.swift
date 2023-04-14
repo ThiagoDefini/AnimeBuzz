@@ -30,7 +30,7 @@ struct SelectEventView: View{
     var events: [Event]
     var body: some View {
         NavigationStack{
-            NavigationBar()
+            NavigationBar(space: 0.0)
             VStack{
                 ZStack{
                     Colors().pink

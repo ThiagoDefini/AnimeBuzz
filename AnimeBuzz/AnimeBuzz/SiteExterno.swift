@@ -17,7 +17,7 @@ struct SiteExterno: View {
                 Colors().pink
                     .ignoresSafeArea()
                 VStack{
-                    NavigationBar()
+                    NavigationBar(space: 0.0)
                     Images.Titulos().titulo_noticias_poa
                         .ignoresSafeArea()
                     Spacer()

@@ -36,14 +36,17 @@ struct TapMapView: View {
                                     .frame(width: 300, height: 550)
                                     .cornerRadius(20.0)
                                     .overlay{
-                                        Icons().expandir
-                                            .padding(.bottom, 507)
-                                            .padding(.leading, 260)
-                                            .foregroundColor(.black)
-                                            .frame(width: 300, height: 550)
-                                            .onTapGesture {
-                                                selected.toggle()
-                                            }
+                                        ZStack(alignment: .top){
+                                            Icons().expandir
+                                                .background(Color.black.opacity(0.5))
+                                                .padding(.bottom, 507)
+                                                .padding(.leading, 260)
+                                                .foregroundColor(.white)
+                                                .frame(width: 300, height: 550)
+                                                .onTapGesture {
+                                                    selected.toggle()
+                                                }
+                                        }
                                     }
                             }
                             
@@ -74,8 +77,10 @@ struct TapMapView: View {
                         .cornerRadius(radius)
                     }
                     .padding()
+                    .ignoresSafeArea() // TALVEZ TIRAR
                 }
                 .scrollIndicators(.hidden)
+                .edgesIgnoringSafeArea(.bottom)
             }
         }
         .overlay(selected ?
