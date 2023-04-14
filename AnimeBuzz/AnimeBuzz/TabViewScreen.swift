@@ -26,14 +26,14 @@ struct TabViewScreen: View {
                             Text("Noticias")
                         }
                     }
-                TabBarFavorites()
+                TabBarFavorites(event: event)
                     .tabItem(){
                         VStack{
                             Icons().estrela
                             Text("Favoritos")
                         }
                     }
-                TabBarSchedule()
+                TabBarSchedule(event: event)
                     .tabItem(){
                         VStack{
                             Icons().calendario

@@ -79,9 +79,8 @@ struct GuestView: View {
                         ForEach(guest.getListOfattraction(), id: \.self){ attraction in
                             GuestAttractionRow(attraction: attraction)
                         }
-                        
-                        
                         .padding(.horizontal)
+                        .padding(.vertical)
                         .foregroundColor(Colors().pink)
                         
                     }
