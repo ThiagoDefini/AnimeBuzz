@@ -64,60 +64,51 @@ struct OnboardingView: View {
                             }
                         }
                     }) {
-                    label: do {
-                        Text(data.buttonText)
-                            .frame(maxWidth: .infinity)
-                            .bold()
-                            .font(.title)
-                            .italic()
-                    }
+                        label: do {
+                            Text(data.buttonText)
+                                .frame(maxWidth: .infinity)
+                        }
                     } // CONTINUE BUTTON
                     .buttonStyle(.borderedProminent)
                     .buttonBorderShape(.roundedRectangle(radius: radius))
                     .tint(Colors().yellow)
                     .controlSize(.large)
-                    //                    .font(.custom(Fonts.Lato().black_italic, size: 32))
                     .modifier(title2())
                     .foregroundColor(Color.black)
+                    .background(
+                        RoundedRectangle(cornerRadius: radius)
+                            .fill(Color.white)
+                            .modifier(buttonShadow())
+                    )
                     .overlay(
                         RoundedRectangle(cornerRadius: radius)
-                            .stroke(Color.black, lineWidth: borderWidth))
+                            .stroke(Color.black, lineWidth: borderWidth)
+                    )
                 } // BOTÃO DE CONTINUAR
                 else {
-                    NavigationLink(destination: SelectEventView(events: [event1, event2]),
-                                   label: {
-                        Text(data.buttonText)
-                            .frame(maxWidth: .infinity)
-                            .bold()
-                            .font(.title)
-                            .italic()
-                    }) // CONTINUE BUTTON
+                    NavigationLink(
+                        destination: SelectEventView(events: [event1, event2]),
+                        label: {
+                            Text(data.buttonText)
+                                .frame(maxWidth: .infinity)
+                        }
+                    )
                     .buttonStyle(.borderedProminent)
                     .buttonBorderShape(.roundedRectangle(radius: radius))
                     .tint(Colors().yellow)
                     .controlSize(.large)
-                    //                    .font(.custom(Fonts.Lato().black_italic, size: 32))
                     .modifier(title2())
                     .foregroundColor(Color.black)
+                    .background(
+                        RoundedRectangle(cornerRadius: radius)
+                            .fill(Color.white)
+                            .modifier(buttonShadow())
+                    )
                     .overlay(
                         RoundedRectangle(cornerRadius: radius)
-                            .stroke(Color.black, lineWidth: borderWidth))
+                            .stroke(Color.black, lineWidth: borderWidth)
+                    )
                 } // BOTÃO DE AVANÇAR
-                
-                //                if(data.id != 0){ // BOTÃO DE VOLTAR
-                //                    Button(action: {
-                //                        withAnimation(.easeOut(duration: 2.0)) {
-                //                            if currentTab > 0 {
-                //                                currentTab-=1
-                //                            }
-                //                        }
-                //                    }){
-                //                    label: do {
-                //                        Text("Voltar").underline().foregroundColor(Color.gray)
-                //                    }
-                //                    }
-                //                } // BOTÃO DE VOLTAR
-                //                else{NavigationLink{} label: { Text("Voltar").underline().foregroundColor(Color.gray)}.hidden()}
                 
             }.padding()
                 .onAppear{
@@ -141,9 +132,3 @@ struct OnboardingView: View {
         })
     }
 }
-//
-//struct OnboardingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        OnboardingView(data: OnboardingData.list.first!, btnCornerRadius: .constant(8.0), iconSize: .constant(90.0))
-//    }
-//}
