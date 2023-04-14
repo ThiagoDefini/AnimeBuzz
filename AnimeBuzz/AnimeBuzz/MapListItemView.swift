@@ -18,12 +18,12 @@ struct MapListItemView: View {
             ZStack{
                 Circle()
                     .fill(Colors().circleBlue)
-                    .frame(width: 50, height: 50)
+                    .frame(width: 35, height: 35)
                     .overlay(
                         Circle()
                             .stroke(Color.black, lineWidth: borderWidth))
                 Text(number)
-                    .font(.custom(Fonts.Lato().bold, size: 26))
+                    .font(.custom(Fonts.Lato().bold, size: 22))
                     .padding(.bottom, 3)
                     .padding(.trailing, 3)
             }

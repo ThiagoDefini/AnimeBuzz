@@ -51,7 +51,7 @@ struct TapMapView: View {
                             
                             VStack{
                                 HStack {
-                                    VStack{
+                                    VStack (alignment: .leading){
                                         MapListItemView(number: "1", place: "- Palco MPEG")
                                         MapListItemView(number: "2", place: "- Musical")
                                         MapListItemView(number: "3", place: "- Vip")
@@ -59,7 +59,7 @@ struct TapMapView: View {
                                         MapListItemView(number: "5", place: "- Área 5")
                                         MapListItemView(number: "6", place: "- Área 6")
                                     }
-                                    VStack{
+                                    VStack(alignment: .leading){
                                         MapListItemView(number: "7", place: "- Área 7")
                                         MapListItemView(number: "8", place: "- Área 8")
                                         MapListItemView(number: "9", place: "- Área 9")
@@ -68,8 +68,6 @@ struct TapMapView: View {
                                         MapListItemView(number: "12", place: "- Área 12")
                                     }
                                 }
-//                                .padding(.infinity)
-                                .background(.blue)
                             }
                         }
                         .padding()
@@ -81,20 +79,17 @@ struct TapMapView: View {
                 .scrollIndicators(.hidden)
             }
         }
-        
+        .overlay(selected ?
+                 ZStack{
+            Color.black
+                .ignoresSafeArea()
+                .opacity(0.5)
+                .onTapGesture {
+                    selected.toggle()
+                }
+            Images().mapa .resizable() .frame(width: 360, height: 700) .cornerRadius(20.0)
+        }: nil)
     }
-    //        .overlay(selected ?
-    //                 ZStack{
-    //            Color.black
-    //                .ignoresSafeArea()
-    //                .opacity(0.5)
-    //                .onTapGesture {
-    //                    selected.toggle()
-    //                }
-    //            Images().mapa .resizable() .frame(width: 360, height: 700) .cornerRadius(20.0)
-    //
-    //        }: nil)
-    //}
 }
 
 struct TapMapView_Previews: PreviewProvider {
