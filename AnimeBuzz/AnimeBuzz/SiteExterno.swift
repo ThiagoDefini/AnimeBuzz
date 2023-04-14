@@ -11,10 +11,13 @@ struct SiteExterno: View {
     var body: some View {
         
         ZStack {
+            
             ZStack{
+                
                 Colors().pink
                     .ignoresSafeArea()
                 VStack{
+                    NavigationBar()
                     Images.Titulos().titulo_noticias_poa
                         .ignoresSafeArea()
                     Spacer()

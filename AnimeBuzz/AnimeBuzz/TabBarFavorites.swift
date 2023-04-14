@@ -1,5 +1,5 @@
 //
-//  TabBarSchedule.swift
+//  TabBarFavorites.swift
 //  AnimeBuzz
 //
 //  Created by Maria Luísa Lamb Souto on 13/04/23.
@@ -7,12 +7,8 @@
 
 import SwiftUI
 
-struct TabBarSchedule: View {
+struct TabBarFavorites: View {
     var body: some View {
-        
-//        var arrayAttractions: [Attraction] = [attraction1, attraction2, attraction3, attraction4, attraction5, attraction6, attraction7, attraction8, attraction9, attraction10]
-//
-        
         NavigationStack {
             
             ZStack {
@@ -21,14 +17,14 @@ struct TabBarSchedule: View {
                         Colors().pink
                             .ignoresSafeArea()
                         VStack{
-                            Images.Titulos().titulo_cronograma
+                            Images.Titulos().titulo_favoritos
                                 .ignoresSafeArea()
                             Spacer()
                         }
                         VStack{
                             ScrollView{
                                 HStack{
-                                    StrokeText(text: "cronograma", width: 2, color: .black)
+                                    StrokeText(text: "favoritos", width: 2, color: .black)
                                         .foregroundColor(.white)
                                         .font(.system(size: 64, weight: .bold))
                                 }
@@ -42,8 +38,8 @@ struct TabBarSchedule: View {
     }
 }
 
-struct TabBarSchedule_Previews: PreviewProvider {
+struct TabBarFavorites_Previews: PreviewProvider {
     static var previews: some View {
-        TabBarSchedule()
+        TabBarFavorites()
     }
 }
