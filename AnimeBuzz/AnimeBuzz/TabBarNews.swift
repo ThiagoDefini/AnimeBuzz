@@ -63,7 +63,7 @@ struct TabBarNews: View {
                                             .padding(.bottom, padding1)
                                         
                                         NavigationLink("") {
-                                            SiteExterno()
+                                            ExternalWebsite()
                                         }
                                         .buttonStyle(TicketButton())
                                         .padding(.bottom, padding2)

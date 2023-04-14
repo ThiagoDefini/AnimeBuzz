@@ -36,6 +36,7 @@ class Images{
     var poa = Image("Poa")
     var portao = Image("Portao")
     var mapa = Image("Mapa")
+    var logoTabView = Image("LogoTabView")
     
     class Atividades{
         var animeke = Image("Animeke")

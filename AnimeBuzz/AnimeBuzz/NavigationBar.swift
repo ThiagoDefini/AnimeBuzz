@@ -18,22 +18,30 @@ struct NavigationBar: View {
                 }
                 .frame(maxWidth: .infinity)
                 VStack{
-                    Images().logo
+                    Images().logoTabView
                         .resizable()
-                        .padding(.top, 20)
                         .padding(.bottom, 20)
-                        .frame(width: 100.0, height: 100.0)
+                        .padding(.top, -30)
+                        .frame(width: 100.0, height: 50.0)
                 }
                 .frame(maxWidth: .infinity)
                 VStack{
                     HStack{
-                        Image(systemName: "info.circle")
-                            .resizable()
-                            .frame(width: 25, height: 25)
-                            .padding(.trailing, 10)
-                        Image(systemName: "at")
-                            .resizable()
-                            .frame(width: 25, height: 25)
+                        NavigationLink{
+                            ExternalWebsite()
+                        }label: {
+                            Image(systemName: "info.circle")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                                .padding(.trailing, 10)
+                        }
+                        NavigationLink{
+                            ExternalWebsite()
+                        }label: {
+                            Image(systemName: "at")
+                                .resizable()
+                                .frame(width: 20, height: 20)
+                        }
                     }
                     .foregroundColor(.white)
                     .padding(.bottom, 20)

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SiteExterno: View {
+struct ExternalWebsite: View {
     var body: some View {
         
         ZStack {
@@ -16,8 +16,11 @@ struct SiteExterno: View {
                 
                 Colors().pink
                     .ignoresSafeArea()
+                
                 VStack{
-                    NavigationBar()
+                    ZStack{
+                        NavigationBar()
+                    }
                     Images.Titulos().titulo_noticias_poa
                         .ignoresSafeArea()
                     Spacer()
@@ -35,8 +38,8 @@ struct SiteExterno: View {
     }
 }
 
-struct SiteExterno_Previews: PreviewProvider {
+struct ExternalWebsite_Previews: PreviewProvider {
     static var previews: some View {
-        SiteExterno()
+        ExternalWebsite()
     }
 }
