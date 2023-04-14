@@ -29,6 +29,7 @@ struct GuestView: View {
                                 
                                 Text(guest.getName())
                                     .modifier(title3())
+                                    .foregroundColor(.black)
                             }
                             
                             Image(guest.getBigImage())
