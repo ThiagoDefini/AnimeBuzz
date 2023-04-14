@@ -24,19 +24,21 @@ struct GuestView: View {
                             
                             Text(guest.getName())
                                 .modifier(title3())
-                            
                         }
                         
                         Image(guest.getBigImage())
                             .resizable()
                             .frame(width: 300, height: 300)
                         
-                        Text(guest.getCategory())
-                            .padding()
+//                        Text(guest.getCategory())
+//                            .padding()
                         
                         Text(guest.getDescription())
+                            .padding(.top, 20)
+                            .multilineTextAlignment(.center)
                             .padding(.horizontal)
                             .modifier(AnimeBuzz.body())
+                            .foregroundColor(.white)
                         
                         HStack {
                             

@@ -16,8 +16,6 @@ struct GuestInfos: View {
         VStack{
             
             VStack{
-                //colocar NavigationLink AQUI (){
-                
                 NavigationLink{
                     GuestView(guest: guest)
                 }label: {
@@ -31,7 +29,6 @@ struct GuestInfos: View {
                     .font(.system(size: 24))
                 Text(guest.getCategory())
                     .font(.system(size: 16))
-                
             }
             .padding()
             .bold()
