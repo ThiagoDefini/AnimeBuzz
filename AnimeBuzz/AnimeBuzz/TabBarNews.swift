@@ -47,104 +47,77 @@ struct TabBarNews: View {
     var body: some View {
         
         NavigationStack {
-            
             ZStack {
-                VStack(spacing: 0){
-                    Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
-                    ZStack{
-                        Colors().pink
-                            .edgesIgnoringSafeArea(.bottom)
-                        VStack{
-                            Images.Titulos().titulo_noticias_poa
-                                .ignoresSafeArea()
-                            Spacer()
-                        }
-                        
-                        VStack{
-                            ScrollView{
-                                HStack{
-                                    StrokeText(text: event.getCity(), width: 2, color: .black)
-                                        .foregroundColor(.white)
-                                        .font(.system(size: 64, weight: .bold))
+                ZStack{
+                    Colors().pink
+                        .ignoresSafeArea()
+                    VStack{
+                        Images.Titulos().titulo_noticias_poa
+                            .ignoresSafeArea()
+                        Spacer()
+                    }
+                    
+                    VStack{
+                        ScrollView{
+                            HStack{
+                                StrokeText(text: event.getCity(), width: 2, color: .black)
+                                    .foregroundColor(.white)
+                                    .font(.system(size: 64, weight: .bold))
+                            }
+                            .padding(.bottom, padding1)
+                            
+                            NavigationLink("") {
+                                SiteExterno()
+                            }
+                            .buttonStyle(TicketButton())
+                            .padding(.bottom, padding2)
+                            .padding(.top, -10)
+                            
+                            VStack{
+                                VStack{
+                                    
+                                    HStack{
+                                        Text ("Convidados")
+                                            .foregroundColor(.white)
+                                        
+                                        Text ("mais")
+                                            .foregroundColor(Colors().yellow)
+                                        
+                                    }
+                                    .modifier(title2())
+                                    
+                                    Text ("do que especiais")
+                                        .foregroundColor(Colors().yellow)
+                                        .modifier(title2())
                                 }
-                                .padding(.bottom, padding1)
-                                
-                                NavigationLink("") {
-                                    SiteExterno()
-                                }
-                                .buttonStyle(TicketButton())
-                                .padding(.bottom, padding2)
-                                .padding(.top, -10)
+                                .bold()
+                                .font(.system(size: 36))
+                                .italic()
+                                .padding(.top, 20)
                                 
                                 VStack{
-                                    VStack{
-                                        
-                                        HStack{
-                                            Text ("Convidados")
-                                                .foregroundColor(.white)
-                                            
-                                            Text ("mais")
-                                                .foregroundColor(Colors().yellow)
-                                            
-                                        }
-                                        .modifier(title2())
-                                        
-                                        Text ("do que especiais")
-                                            .foregroundColor(Colors().yellow)
-                                            .modifier(title2())
+                                    ForEach(event.getGuests(), id: \.self) {guest in
+                                        GuestInfos(guest: guest)
                                     }
-                                    .bold()
-                                    .font(.system(size: 36))
-                                    .italic()
-                                    .padding(.top, 20)
-                                    
-                                    VStack{
-                                        ForEach(event.getGuests(), id: \.self) {guest in
-                                            GuestInfos(guest: guest)
-                                        }
-                                    }
-                                    
-                                    Spacer()
                                 }
-                                .frame(width: 350, alignment: .center)
-                                .background(Colors().purple)
-                                .cornerRadius(20)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(Color.black, lineWidth: 2)
-                                )
                                 
+                                Spacer()
                             }
+                            .frame(width: 350, alignment: .center)
+                            .background(Colors().purple)
+                            .cornerRadius(20)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 20)
+                                    .stroke(Color.black, lineWidth: 2)
+                            )
+                            
                         }
                     }
                 }
             }
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(Colors().black, for: .navigationBar)
-            .toolbar(.visible, for: .navigationBar)
-            .toolbar{
-                ToolbarItem(placement: .principal){
-                    Images().logo
-                        .resizable()
-                        .padding(.top, 40.0)
-                        .frame(width: 100.0, height: 100.0)
-                    
-                }
-                ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing){
-                    Button(action:{}, label:{
-                        Label("Send", systemImage: "info.circle")
-                            .padding(.top, 100)
-                    })
-                    Button(action:{}, label:{
-                        Label("Send", systemImage: "at")
-                            .padding(.top, 100)
-                    })
-                }
-            }
-//            tabViewScreen()
+            
         }
     }
-    
     struct StrokeText: View {
         let text: String
         let width: CGFloat
@@ -170,4 +143,3 @@ struct TabBarNews: View {
         }
     }
 }
-

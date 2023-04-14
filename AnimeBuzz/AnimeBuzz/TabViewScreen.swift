@@ -13,44 +13,50 @@ struct TabViewScreen: View {
     
     var body: some View {
         
-        
-        TabView{
+        VStack{
             
-            TabBarNews(event: event)
-                .tabItem(){
-                    VStack{
-                        Icons().noticias
-                        Text("Noticias")
+            NavigationBar()
+            
+            TabView{
+                
+                TabBarNews(event: event)
+                    .tabItem(){
+                        VStack{
+                            Icons().noticias
+                            Text("Noticias")
+                        }
                     }
-                }
-            TabBarFavorites()
-                .tabItem(){
-                    VStack{
-                        Icons().estrela
-                        Text("Favoritos")
+                TabBarFavorites()
+                    .tabItem(){
+                        VStack{
+                            Icons().estrela
+                            Text("Favoritos")
+                        }
                     }
-                }
-            TabBarSchedule()
-                .tabItem(){
-                    VStack{
-                        Icons().calendario
-                        Text("Cronograma")
+                TabBarSchedule()
+                    .tabItem(){
+                        VStack{
+                            Icons().calendario
+                            Text("Cronograma")
+                        }
+                        .background(.pink)
                     }
-                    .background(.pink)
-                }
-            TapMapView()
-                .tabItem(){
-                    VStack{
-                        Icons().mapa
-                        Text("Mapa")
+                TapMapView()
+                    .tabItem(){
+                        VStack{
+                            Icons().mapa
+                            Text("Mapa")
+                        }
                     }
-                }
+            }
+            .accentColor(.white)
+            .onAppear(){
+                UITabBar.appearance().backgroundColor = UIColor(Colors().black)
+                UITabBar.appearance().unselectedItemTintColor = UIColor.white
+                
+            }
         }
-        .accentColor(Colors().green)
-        .onAppear(){
-            UITabBar.appearance().backgroundColor = UIColor(Colors().black)
-            UITabBar.appearance().unselectedItemTintColor = UIColor.white
-        }
+        
     }
 }
 

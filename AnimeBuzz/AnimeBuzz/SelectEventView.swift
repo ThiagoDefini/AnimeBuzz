@@ -73,30 +73,7 @@ struct SelectEventView: View{
                     }
                 }
             }
-            .navigationBarBackButtonHidden()
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(Colors().black, for: .navigationBar)
-            .toolbar(.visible, for: .navigationBar)
-            .toolbar{
-                ToolbarItem(placement: .principal){
-                    Images().logo
-                        .resizable()
-                        .padding(.top, 40.0)
-                        .frame(width: 100.0, height: 100.0)
-                    
-                }
-                ToolbarItemGroup(placement: ToolbarItemPlacement.navigationBarTrailing){
-                    Button(action:{}, label:{
-                        Label("Send", systemImage: "info.circle")
-                            .padding(.top, 100)
-                    })
-                    Button(action:{}, label:{
-                        Label("Send", systemImage: "at")
-                            .padding(.top, 100)
-                    })
-                }
-                
-            }
+            
             
         }
         

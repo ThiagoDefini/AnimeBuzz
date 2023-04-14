@@ -13,10 +13,9 @@ struct TabBarFavorites: View {
             
             ZStack {
                 VStack(spacing: 0){
-                    Colors().black.edgesIgnoringSafeArea(.top).frame(maxHeight: 2)
                     ZStack{
                         Colors().pink
-                            .edgesIgnoringSafeArea(.bottom)
+                            .ignoresSafeArea()
                         VStack{
                             Images.Titulos().titulo_favoritos
                                 .ignoresSafeArea()
