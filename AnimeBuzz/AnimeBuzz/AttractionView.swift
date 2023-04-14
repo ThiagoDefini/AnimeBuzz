@@ -5,6 +5,8 @@
 //  Created by Felipe Araujo on 13/04/23.
 //
 
+// ajutar espaço
+
 import SwiftUI
 
 
@@ -77,12 +79,11 @@ struct AttractionView: View {
                     }
                     .padding(.leading)
                     
-                        
-                    MapListItemView(number: attraction.getNumber(), place: attraction.getPlace())
-                    
-                    
-                    .background(.green)
-                    .padding(.leading)
+                    HStack{
+                        MapListItemView(number: attraction.getNumber(), place: attraction.getPlace())
+                    }
+//                    .background(.green)
+                    .padding(.horizontal)
                     
                     ZStack{
                         attraction.getMapName()
