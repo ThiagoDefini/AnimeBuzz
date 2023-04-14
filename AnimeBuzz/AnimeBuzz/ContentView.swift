@@ -42,7 +42,7 @@ struct ContentView: View {
                     })
                     .tabViewStyle(PageTabViewStyle())
                     .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
-//                    .padding(.bottom, 40)
+                    //                    .padding(.bottom, 40)
                     
                     if(currentTab != 0){ // BOTÃO DE VOLTAR
                         Button(action: {

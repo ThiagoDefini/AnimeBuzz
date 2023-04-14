@@ -19,13 +19,13 @@ class Event: Hashable{
     
     private var id: String = UUID().uuidString
     private var city: String
-    private var dates: [Date]
+    private var dates: [String]
     private var guests: [Guest]
     private var attractions: [Attraction]
     private var map: String
     private var imageName: Image
     
-    init(city: String, dates: [Date], guests: [Guest], attractions: [Attraction], map: String, imageName: Image) {
+    init(city: String, dates: [String], guests: [Guest], attractions: [Attraction], map: String, imageName: Image) {
         self.city = city
         self.dates = dates
         self.guests = guests
@@ -42,11 +42,11 @@ class Event: Hashable{
         self.city = city
     }
     
-    func getDates() -> [Date]{
+    func getDates() -> [String]{
         return dates
     }
     
-    func addDate(date: Date){
+    func addDate(date: String){
         dates.append(date)
     }
     
@@ -93,5 +93,8 @@ class Event: Hashable{
     func setImageName(imageName: Image){
         self.imageName = imageName
     }
-    
 }
+
+
+var event1 = Event(city: "porto alegre", dates: ["15/04","16/04"], guests: guests1, attractions: listOfAttraction1, map: "", imageName: Images().poa)
+var event2 = Event(city: "portão", dates: ["26/05","27/05","28/05"], guests: guests2, attractions: [], map: "", imageName: Images().portao)

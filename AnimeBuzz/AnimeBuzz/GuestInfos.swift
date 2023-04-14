@@ -16,38 +16,55 @@ struct GuestInfos: View {
         VStack{
             
             VStack{
-                Image(guest.getSmallImage())
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 250)
-                
+                NavigationLink{
+                    GuestView(guest: guest)
+                }label: {
+                    Image(guest.getSmallImage())
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 250)
+                }
                 Text(guest.getName())
                     .padding(.vertical,1)
                     .font(.system(size: 24))
                 Text(guest.getCategory())
                     .font(.system(size: 16))
-
             }
+            .padding()
             .bold()
             .font(.system(size: 20))
             .italic()
             .foregroundColor(.white)
             
             HStack {
-                Image("facebook")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 25)
-                Image("youtube")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 25)
-                Image("instagram")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 25)
+                
+                if guest.getInstagram() != nil {
+                    NavigationLink{
+                        GuestView(guest: guest)
+                    }label: {
+                        Image("instagram")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40)
+                    }
+                    
+                }
+                
+                if guest.getFacebook() != nil {
+                    Image("facebook")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
+                
+                if guest.getYoutube() != nil {
+                    Image("youtube")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                }
             }
-            
+            .padding()
         }
         .background(Colors().purple)
     }
